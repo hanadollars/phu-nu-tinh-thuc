@@ -338,13 +338,61 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:998;
 .s3-warn-body{font-size:12px;color:#92400e;line-height:1.75}
 .s3-note{font-size:11px;color:var(--text3);line-height:1.8}
 
+/* ══ QUY TRÌNH MUA HÀNG ══ */
+.process{padding:80px 48px;background:var(--bg3)}
+.process-inner{max-width:900px;margin:0 auto}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border2);margin-top:48px}
+.ps{background:var(--bg3);padding:28px 22px;text-align:center;transition:background .25s}
+.ps:hover{background:var(--bg4)}
+.ps-num{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--gold);
+  font-family:var(--serif);font-size:16px;font-weight:700;color:var(--gold);
+  display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
+.ps-icon{font-size:24px;margin-bottom:10px}
+.ps-title{font-family:var(--serif);font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px}
+.ps-desc{font-size:12.5px;color:var(--text3);line-height:1.65}
+
+/* ══ POLICIES ══ */
+.policies{padding:80px 48px;background:var(--bg2)}
+.policies-inner{max-width:900px;margin:0 auto}
+.pol-tabs{display:flex;gap:2px;background:var(--border2);margin-top:48px}
+.pol-tab{flex:1;background:var(--bg2);padding:14px 10px;cursor:pointer;
+  font-size:12px;font-weight:600;letter-spacing:.5px;text-align:center;
+  color:var(--text3);transition:background .2s,color .2s;border-bottom:2px solid transparent}
+.pol-tab.active,.pol-tab:hover{background:var(--bg3);color:var(--gold);border-bottom-color:var(--gold)}
+.pol-panel{display:none;background:var(--bg3);border:1px solid var(--border2);
+  border-top:none;padding:32px 28px}
+.pol-panel.active{display:block}
+.pol-panel h4{font-family:var(--serif);font-size:16px;font-weight:700;color:var(--gold2);
+  margin-bottom:10px;margin-top:20px}
+.pol-panel h4:first-child{margin-top:0}
+.pol-panel p{font-size:14px;color:var(--text2);line-height:1.8;margin-bottom:10px}
+.pol-panel ul{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
+.pol-panel ul li{font-size:14px;color:var(--text2);line-height:1.7;
+  display:flex;align-items:flex-start;gap:8px}
+.pol-panel ul li::before{content:'—';color:var(--gold);opacity:.6;flex-shrink:0;margin-top:1px}
+
+/* ══ DOWNLOAD NOTICE (step 3) ══ */
+.dl-notice{background:#1A1000;border:2px solid #F59E0B;border-radius:8px;
+  padding:20px 20px;margin:16px 0 12px}
+.dl-notice-top{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.dl-notice-badge{background:#F59E0B;color:#1A1000;font-size:10px;font-weight:800;
+  letter-spacing:1px;padding:3px 10px;border-radius:3px;text-transform:uppercase;flex-shrink:0}
+.dl-notice-title{font-size:14px;font-weight:700;color:#F0C040}
+.dl-steps{display:flex;flex-direction:column;gap:8px}
+.dl-step{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:#E0C060;line-height:1.6}
+.dl-step-n{background:#F59E0B;color:#1A1000;width:20px;height:20px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;flex-shrink:0;margin-top:1px}
+
 /* ══ REVEAL ══ */
 .rv{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease}
 .rv.in{opacity:1;transform:none}
 
 /* ══ RESPONSIVE ══ */
 @media(max-width:900px){
-  .hdr,.hero-inner,.pain,.compass,.parts,.fquotes,.testi,.pricing,.faq,.footer{padding-left:20px;padding-right:20px}
+  .hdr,.hero-inner,.pain,.compass,.parts,.fquotes,.testi,.pricing,.faq,.process,.policies,.footer{padding-left:20px;padding-right:20px}
+  .process-steps{grid-template-columns:repeat(2,1fr)}
+  .pol-tabs{flex-direction:column;gap:0}
+  .pol-tab{text-align:left;padding:12px 16px}
   .hero-inner{grid-template-columns:1fr;gap:48px;padding-top:90px}
   .book-wrap{order:-1}
   .pain-grid,.parts-grid{grid-template-columns:1fr}
@@ -643,6 +691,40 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:998;
   </div>
 </section>
 
+<!-- ══ QUY TRÌNH MUA HÀNG ══ -->
+<section class="process">
+  <div class="process-inner">
+    <p class="sec-tag rv">Quy Trình Mua Hàng</p>
+    <h2 style="font-family:var(--serif);font-size:clamp(24px,3vw,36px);font-weight:900;line-height:1.2;margin-top:12px" class="rv">4 bước — <em style="font-style:italic;color:var(--gold2)">nhận ngay trong 3 phút</em></h2>
+    <div class="process-steps">
+      <div class="ps rv">
+        <div class="ps-icon">📝</div>
+        <div class="ps-num">1</div>
+        <div class="ps-title">Điền thông tin</div>
+        <div class="ps-desc">Nhập họ tên và địa chỉ email để nhận tài liệu. Không cần tạo tài khoản.</div>
+      </div>
+      <div class="ps rv" data-d=".1">
+        <div class="ps-icon">📱</div>
+        <div class="ps-num">2</div>
+        <div class="ps-title">Quét mã QR</div>
+        <div class="ps-desc">Quét QR hoặc chuyển khoản ACB theo thông tin hiển thị. Nhập đúng nội dung CK.</div>
+      </div>
+      <div class="ps rv" data-d=".2">
+        <div class="ps-icon">⚡</div>
+        <div class="ps-num">3</div>
+        <div class="ps-title">Xác nhận tự động</div>
+        <div class="ps-desc">Hệ thống xác nhận thanh toán trong 1–3 phút. Không cần chờ xét duyệt.</div>
+      </div>
+      <div class="ps rv" data-d=".3">
+        <div class="ps-icon">📧</div>
+        <div class="ps-num">4</div>
+        <div class="ps-title">Nhận qua email</div>
+        <div class="ps-desc">Link tải + hóa đơn VAT gửi tự động về email. Tải về máy, mở lên và bắt đầu.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ══ FAQ ══ -->
 <section class="faq">
   <div class="faq-inner">
@@ -653,6 +735,80 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:998;
       <div class="faq-item rv"><div class="faq-q" onclick="toggleFaq(this)">Không nhận được email thì liên hệ ai?<i class="faq-icon">+</i></div><div class="faq-a">Liên hệ admin@hanadola.com hoặc 0935.251.866. Chúng tôi hỗ trợ trong 30 phút giờ hành chính.</div></div>
       <div class="faq-item rv"><div class="faq-q" onclick="toggleFaq(this)">Có hoàn tiền không?<i class="faq-icon">+</i></div><div class="faq-a">Do đây là tài liệu số, không hỗ trợ hoàn tiền sau khi giao hàng. Nếu có lỗi kỹ thuật, chúng tôi hỗ trợ hoàn toàn miễn phí.</div></div>
       <div class="faq-item rv"><div class="faq-q" onclick="toggleFaq(this)">Phù hợp với phụ nữ đã có gia đình không?<i class="faq-icon">+</i></div><div class="faq-a">Rất phù hợp. Đặc biệt Phần 07 (Đại Nữ Chủ) và Phần 04 (Kỳ Vọng Đúng Chỗ) đi sâu vào những vấn đề phụ nữ trong gia đình hay gặp nhất.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ POLICIES ══ -->
+<section class="policies" id="policies">
+  <div class="policies-inner">
+    <p class="sec-tag rv">Chính Sách &amp; Điều Khoản</p>
+    <div class="pol-tabs rv">
+      <div class="pol-tab active" onclick="showPol('muahang',this)">Quy trình &amp; Đổi trả</div>
+      <div class="pol-tab" onclick="showPol('baomat',this)">Bảo mật thông tin</div>
+      <div class="pol-tab" onclick="showPol('dieukien',this)">Điều kiện sử dụng</div>
+    </div>
+
+    <div id="pol-muahang" class="pol-panel active">
+      <h4>Quy trình nhận hàng</h4>
+      <ul>
+        <li>Sau khi chuyển khoản thành công, hệ thống tự động xác nhận trong <strong>1–3 phút</strong></li>
+        <li>Link tải tài liệu và hóa đơn VAT điện tử được gửi ngay về email bạn đã đăng ký</li>
+        <li>Kiểm tra hộp thư <strong>Spam / Promotions</strong> nếu không thấy trong Inbox</li>
+        <li>Liên hệ admin@hanadola.com hoặc 0935.251.866 nếu chưa nhận được sau 15 phút</li>
+      </ul>
+      <h4>⚠️ Lưu ý quan trọng khi sử dụng</h4>
+      <p>Tài liệu là file kỹ thuật số. Bạn cần <strong>tải về thiết bị (máy tính / điện thoại)</strong> trước khi mở. Mở trực tiếp từ link trong email hoặc trình duyệt có thể không hiển thị đúng nội dung.</p>
+      <h4>Chính sách đổi trả</h4>
+      <ul>
+        <li>Do đây là <strong>tài liệu kỹ thuật số</strong>, chúng tôi không hỗ trợ hoàn tiền sau khi đã giao hàng thành công</li>
+        <li>Nếu file lỗi, không mở được, hoặc thiếu nội dung — chúng tôi hỗ trợ giao lại <strong>miễn phí hoàn toàn</strong></li>
+        <li>Nếu chưa nhận được tài liệu sau 30 phút kể từ khi thanh toán thành công — liên hệ ngay để được hỗ trợ ưu tiên</li>
+        <li>Mọi yêu cầu hỗ trợ vui lòng gửi trong vòng <strong>24 giờ</strong> kể từ lúc thanh toán</li>
+      </ul>
+      <h4>Liên hệ hỗ trợ</h4>
+      <p>📧 admin@hanadola.com &nbsp;·&nbsp; 📞 0935.251.866<br>Giờ làm việc: 8:00 – 21:00, thứ Hai – Chủ Nhật</p>
+    </div>
+
+    <div id="pol-baomat" class="pol-panel">
+      <h4>Thông tin chúng tôi thu thập</h4>
+      <ul>
+        <li><strong>Họ tên</strong> — để cá nhân hóa email xác nhận</li>
+        <li><strong>Địa chỉ email</strong> — để giao tài liệu và hóa đơn</li>
+        <li><strong>Số điện thoại</strong> (không bắt buộc) — để hỗ trợ khi cần</li>
+      </ul>
+      <h4>Chúng tôi dùng thông tin để làm gì?</h4>
+      <ul>
+        <li>Giao tài liệu và hóa đơn VAT về email sau thanh toán</li>
+        <li>Gửi email hỗ trợ kỹ thuật khi bạn cần</li>
+        <li>Lưu lịch sử đơn hàng để đối soát khi cần thiết</li>
+      </ul>
+      <h4>Cam kết bảo mật</h4>
+      <ul>
+        <li>Thông tin của bạn <strong>không bao giờ được bán hoặc chia sẻ</strong> với bất kỳ bên thứ ba nào</li>
+        <li>Chúng tôi <strong>không gửi spam</strong> hay email marketing ngoài phạm vi đơn hàng</li>
+        <li>Dữ liệu được bảo mật theo tiêu chuẩn SSL và lưu trữ an toàn trên hệ thống đám mây</li>
+        <li>Bạn có quyền yêu cầu xóa dữ liệu bất kỳ lúc nào bằng cách gửi email đến admin@hanadola.com</li>
+      </ul>
+      <h4>Đơn vị vận hành</h4>
+      <p>Công ty TNHH Hanadola Media &amp; Technology<br>MST: 0319352856 · P903, Diamond Plaza, 34 Lê Duẩn, TP.HCM</p>
+    </div>
+
+    <div id="pol-dieukien" class="pol-panel">
+      <h4>Bản quyền nội dung</h4>
+      <ul>
+        <li>Toàn bộ nội dung trong tài liệu là tài sản trí tuệ của Hanadola Media &amp; Technology</li>
+        <li>Được cấp phép sử dụng <strong>cá nhân</strong> — không được sao chép, chia sẻ, phân phối lại dưới bất kỳ hình thức nào</li>
+        <li>Nghiêm cấm bán lại, đăng tải công khai hoặc in ấn phân phối khi chưa có sự đồng ý bằng văn bản</li>
+      </ul>
+      <h4>Giới hạn trách nhiệm</h4>
+      <ul>
+        <li>Nội dung trong tài liệu mang tính tham khảo và chia sẻ kinh nghiệm thực tế</li>
+        <li>Kết quả thực tế có thể khác nhau tùy từng cá nhân và hoàn cảnh</li>
+        <li>Hanadola không chịu trách nhiệm cho các quyết định cá nhân dựa trên nội dung tài liệu</li>
+      </ul>
+      <h4>Điều khoản thay đổi</h4>
+      <p>Hanadola có quyền cập nhật chính sách này bất kỳ lúc nào. Phiên bản mới nhất luôn được đăng tại trang phunuthuctinh.hanadola.com</p>
     </div>
   </div>
 </section>
@@ -723,10 +879,17 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:998;
           <span class="s3-icon">✦</span>
           <div class="s3-title">Hành trình bắt đầu rồi!</div>
           <div class="s3-sub" id="s3-sub">Thanh toán thành công. Tài liệu đã gửi về email của bạn.</div>
-          <a href="#" id="s3-btn" class="s3-btn">✦ Nhận Cẩm Nang Ngay</a>
-          <div class="s3-warn">
-            <div class="s3-warn-title">⚠️ Lưu ý quan trọng</div>
-            <div class="s3-warn-body">📥 <strong>Tải tài liệu về thiết bị rồi mới mở</strong> — mở trực tiếp trên trình duyệt có thể không hoạt động đúng nhé!</div>
+          <a href="#" id="s3-btn" class="s3-btn">📥 Nhấn để tải Cẩm Nang về máy</a>
+          <div class="dl-notice">
+            <div class="dl-notice-top">
+              <span class="dl-notice-badge">⚠️ Quan trọng</span>
+              <span class="dl-notice-title">Phải làm đúng 3 bước này mới xem được!</span>
+            </div>
+            <div class="dl-steps">
+              <div class="dl-step"><div class="dl-step-n">1</div><span><strong>Nhấn nút vàng bên trên</strong> → trình duyệt sẽ tải file về máy</span></div>
+              <div class="dl-step"><div class="dl-step-n">2</div><span><strong>Mở file vừa tải</strong> từ thư mục Downloads trên máy tính hoặc điện thoại</span></div>
+              <div class="dl-step"><div class="dl-step-n">3</div><span><strong>Không mở trực tiếp</strong> từ link trong email hay trình duyệt — sẽ không hiển thị đúng nội dung</span></div>
+            </div>
           </div>
           <div class="s3-note">📧 Link gửi về email · 🧾 Hóa đơn VAT kèm theo<br>Hỗ trợ: admin@hanadola.com · 0935.251.866</div>
         </div>
@@ -858,6 +1021,15 @@ function startPolling(code){
   },3000);
 }
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+
+/* ══ POLICY TABS ══ */
+function showPol(id,tab){
+  document.querySelectorAll('.pol-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.pol-tab').forEach(t=>t.classList.remove('active'));
+  const panel=document.getElementById('pol-'+id);
+  if(panel)panel.classList.add('active');
+  if(tab)tab.classList.add('active');
+}
 </script>
 </body>
 </html>
