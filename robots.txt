@@ -4,7 +4,4 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: Facebot
-Allow: /
-
 Sitemap: https://phunuthuctinh.hanadola.com/sitemap.xml
