@@ -7,5 +7,4 @@ Allow: /
 User-agent: Facebot
 Allow: /
 
-User-agent: Twitterbot
-Allow: /
+Sitemap: https://phunuthuctinh.hanadola.com/sitemap.xml
