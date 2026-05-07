@@ -3,395 +3,362 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Đại Nữ Chủ — Hành Trình Tìm Lại Chính Mình | HanaDola</title>
-<meta name="description" content="8 chương thực hành giúp người phụ nữ buông gánh nặng không tên, thoát khỏi lo âu và bắt đầu sống thật sự cho chính mình. Chỉ 99k.">
-<meta property="og:title" content="Đại Nữ Chủ — Hành Trình Tìm Lại Chính Mình">
-<meta property="og:description" content="8 chương thực hành dành cho người phụ nữ muốn làm chủ cuộc đời mình. Chỉ 99k.">
-<meta property="og:locale" content="vi_VN">
+<title>Đại Nữ Chủ — Chiếc La Bàn Cho Người Phụ Nữ Đang Tìm Lại Chính Mình</title>
+<meta name="description" content="Bạn mệt mỏi, bế tắc, cảm thấy thiếu một thứ gì đó mà không đặt tên được? Đây là chiếc la bàn giúp bạn định hướng lại cuộc đời. Chỉ 99k.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --bg:#070312;--bg2:#0D0520;--bg3:#120828;
-  --violet:#8B32D0;--violet2:#6A20A8;
-  --pink:#D42870;--rose:#E85480;--blush:#F4A0C0;
-  --gold:#D4A840;--gold2:#F0C050;
-  --text:#FBF5FF;--text2:rgba(251,245,255,.65);--text3:rgba(251,245,255,.35);
-  --border:rgba(212,40,112,.22);--border2:rgba(139,50,208,.2);
+  --bg:#080807;--bg2:#0F0E0C;--bg3:#141412;--bg4:#1A1917;
+  --gold:#C4A24A;--gold2:#DFC06A;--gold3:#F0D898;
+  --rose:#C08070;--warm:#E8E0D0;
+  --text:#FAFAF8;--text2:rgba(250,250,248,.6);--text3:rgba(250,250,248,.32);
+  --border:rgba(196,162,74,.2);--border2:rgba(196,162,74,.1);
   --serif:'Playfair Display',Georgia,serif;
   --sans:'Be Vietnam Pro',system-ui,sans-serif;
 }
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.8;overflow-x:hidden}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:998;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");opacity:.7}
+#pg{position:fixed;top:0;left:0;z-index:1001;height:2px;
+  background:linear-gradient(90deg,var(--gold),var(--gold3),var(--gold));width:0;transition:width .1s linear}
 
-/* grain overlay */
-body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:999;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");opacity:.6}
-
-/* PROGRESS BAR */
-#pg{position:fixed;top:0;left:0;z-index:1000;height:2px;background:linear-gradient(90deg,var(--violet),var(--pink),var(--gold));width:0;transition:width .1s linear}
+/* ══ PROMO BANNER ══ */
+.promo-bar{background:linear-gradient(90deg,#1A1500,#2A2000,#1A1500);
+  border-bottom:1px solid rgba(196,162,74,.3);padding:10px 20px;
+  text-align:center;font-size:13px;color:var(--text2);
+  display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
+.promo-bar strong{color:var(--gold2);font-weight:700}
+.promo-cd{display:flex;align-items:center;gap:4px}
+.pcd{background:rgba(196,162,74,.15);border:1px solid rgba(196,162,74,.3);
+  border-radius:4px;padding:3px 8px;font-family:var(--serif);font-size:15px;font-weight:700;color:var(--gold3);min-width:36px;text-align:center}
+.pcd-sep{color:var(--gold);font-weight:700}
 
 /* ══ HEADER ══ */
-.hdr{position:sticky;top:0;z-index:200;background:rgba(7,3,18,.9);backdrop-filter:blur(16px);
-  border-bottom:1px solid rgba(139,50,208,.15);padding:0 40px;height:64px;
-  display:flex;align-items:center;justify-content:space-between}
-.hdr-brand{display:flex;flex-direction:column;gap:1px}
-.hdr-logo{font-family:var(--serif);font-size:20px;font-weight:700;font-style:italic;
-  background:linear-gradient(135deg,#FBF5FF,#D4A840);-webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;line-height:1.1}
-.hdr-count{font-size:11px;color:var(--text3);display:flex;align-items:center;gap:4px}
-.hdr-count strong{color:var(--blush)}
-.hdr-cta{background:linear-gradient(135deg,var(--violet2),var(--pink));color:#fff;
-  border:none;padding:10px 22px;border-radius:6px;font-family:var(--sans);
-  font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;
-  box-shadow:0 4px 20px rgba(212,40,112,.35);transition:opacity .2s,transform .2s}
-.hdr-cta:hover{opacity:.9;transform:translateY(-1px)}
+.hdr{position:sticky;top:0;z-index:200;background:rgba(8,8,7,.95);
+  backdrop-filter:blur(20px);border-bottom:1px solid var(--border2);
+  padding:0 48px;height:62px;display:flex;align-items:center;justify-content:space-between}
+.hdr-brand{font-family:var(--serif);font-size:21px;font-weight:700;font-style:italic;
+  background:linear-gradient(135deg,var(--warm),var(--gold));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hdr-right{display:flex;align-items:center;gap:20px}
+.hdr-count{font-size:12px;color:var(--text3)}
+.hdr-count strong{color:var(--gold2)}
+.hdr-btn{background:var(--gold);color:#080807;border:none;padding:9px 22px;
+  border-radius:5px;font-family:var(--sans);font-size:13px;font-weight:700;
+  cursor:pointer;letter-spacing:.3px;transition:background .2s,transform .2s}
+.hdr-btn:hover{background:var(--gold2);transform:translateY(-1px)}
+
+/* ══ FLOATING CTA ══ */
+.float-cta{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);
+  z-index:300;opacity:0;pointer-events:none;transition:opacity .4s,transform .4s;
+  transform:translateX(-50%) translateY(10px)}
+.float-cta.show{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+.float-cta-inner{background:linear-gradient(135deg,#1A1400,#2C2000);
+  border:1px solid rgba(196,162,74,.5);border-radius:50px;
+  padding:12px 28px 12px 20px;display:flex;align-items:center;gap:14px;
+  box-shadow:0 8px 40px rgba(0,0,0,.6),0 0 0 1px rgba(196,162,74,.1);
+  white-space:nowrap}
+.float-disc{font-size:11px;color:var(--text3);text-decoration:line-through}
+.float-price{font-family:var(--serif);font-size:22px;font-weight:900;color:var(--gold2)}
+.float-btn{background:var(--gold);color:#080807;border:none;padding:10px 20px;
+  border-radius:40px;font-family:var(--sans);font-size:13px;font-weight:700;
+  cursor:pointer;transition:background .2s;letter-spacing:.3px}
+.float-btn:hover{background:var(--gold2)}
 
 /* ══ HERO ══ */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;
-  background:linear-gradient(160deg,#07031200 0%,#0D0520 40%,#120828 100%)}
-.hero-bg{position:absolute;inset:0;
-  background:radial-gradient(ellipse 70% 60% at 70% 50%,rgba(139,50,208,.18) 0%,transparent 60%),
-    radial-gradient(ellipse 40% 40% at 20% 80%,rgba(212,40,112,.12) 0%,transparent 55%),
-    radial-gradient(ellipse 60% 50% at 50% 0%,rgba(212,168,64,.08) 0%,transparent 50%)}
-/* floating orbs */
-.orb{position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none;animation:orbFloat 8s ease-in-out infinite}
-.orb1{width:300px;height:300px;background:rgba(139,50,208,.2);top:10%;right:30%;animation-delay:0s}
-.orb2{width:200px;height:200px;background:rgba(212,40,112,.15);bottom:20%;right:10%;animation-delay:3s}
-.orb3{width:150px;height:150px;background:rgba(212,168,64,.1);top:60%;left:5%;animation-delay:5s}
-@keyframes orbFloat{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-30px) scale(1.05)}}
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;
+  background:radial-gradient(ellipse 80% 70% at 60% 50%,#1C1700 0%,var(--bg) 60%)}
+.hero-glow{position:absolute;width:500px;height:500px;border-radius:50%;
+  background:radial-gradient(circle,rgba(196,162,74,.08) 0%,transparent 70%);
+  right:-100px;top:50%;transform:translateY(-50%);pointer-events:none}
+.hero-inner{position:relative;z-index:1;max-width:1200px;margin:0 auto;
+  padding:80px 48px 60px;display:grid;grid-template-columns:1fr 380px;gap:80px;align-items:center}
+.hero-eyebrow{font-size:10px;letter-spacing:4px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:24px;display:flex;align-items:center;gap:10px}
+.hero-eyebrow::before{content:'';width:20px;height:1px;background:var(--gold);opacity:.7}
+.hero-h1{font-family:var(--serif);font-size:clamp(36px,4.5vw,58px);font-weight:900;
+  line-height:1.1;margin-bottom:20px;letter-spacing:-1px}
+.hero-h1 em{font-style:italic;color:var(--gold2)}
+.hero-sub{font-size:17px;color:var(--text2);line-height:1.75;margin-bottom:36px;max-width:500px}
+.hero-cta{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.hero-btn-main{background:var(--gold);color:#080807;border:none;padding:16px 36px;
+  border-radius:6px;font-family:var(--sans);font-size:16px;font-weight:700;cursor:pointer;
+  box-shadow:0 8px 32px rgba(196,162,74,.3);transition:background .2s,transform .2s,box-shadow .2s}
+.hero-btn-main:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 12px 40px rgba(196,162,74,.4)}
+.hero-price-info{text-align:left}
+.hero-price-old{font-size:12px;color:var(--text3);text-decoration:line-through}
+.hero-price-new{font-family:var(--serif);font-size:28px;font-weight:900;color:var(--gold2)}
+.hero-trust{margin-top:28px;display:flex;gap:24px;flex-wrap:wrap}
+.ht-item{font-size:12px;color:var(--text3);display:flex;align-items:center;gap:6px}
+.ht-item::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--gold);flex-shrink:0}
 
-.hero-inner{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:80px 40px 60px;
-  display:grid;grid-template-columns:1fr 400px;gap:60px;align-items:center}
-.hero-label{font-size:11px;letter-spacing:3px;color:var(--blush);text-transform:uppercase;
-  margin-bottom:20px;display:flex;align-items:center;gap:10px}
-.hero-label::before{content:'';width:24px;height:1px;background:var(--blush);opacity:.6}
-.hero-h1{font-family:var(--serif);font-size:clamp(38px,5vw,62px);font-weight:900;
-  line-height:1.08;margin-bottom:12px;letter-spacing:-1px}
-.hero-h1 em{font-style:italic;
-  background:linear-gradient(135deg,var(--rose),var(--blush));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero-sub{font-size:clamp(16px,2vw,19px);color:var(--text2);line-height:1.7;margin-bottom:32px;max-width:540px}
-.hero-sub strong{color:var(--text);font-weight:600}
-.hero-cta-wrap{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:28px}
-.hero-btn{background:linear-gradient(135deg,var(--violet2),var(--pink));color:#fff;
-  border:none;padding:16px 36px;border-radius:8px;font-family:var(--sans);
-  font-size:16px;font-weight:700;cursor:pointer;
-  box-shadow:0 8px 40px rgba(212,40,112,.4);transition:transform .2s,box-shadow .2s}
-.hero-btn:hover{transform:translateY(-2px);box-shadow:0 12px 50px rgba(212,40,112,.55)}
-.hero-price-note{font-size:13px;color:var(--text3)}
-.hero-trust{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
-.trust-item{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--text3)}
-.trust-dot{width:6px;height:6px;border-radius:50%;background:var(--violet);flex-shrink:0}
+/* ══ BOOK COVER ══ */
+.book-wrap{position:relative;display:flex;align-items:center;justify-content:center}
+.book{width:220px;height:305px;position:relative;
+  transform:perspective(900px) rotateY(-15deg) rotateX(2deg);
+  transition:transform .5s ease;filter:drop-shadow(-16px 24px 48px rgba(0,0,0,.8))}
+.book:hover{transform:perspective(900px) rotateY(-6deg) rotateX(0)}
+.bk-front{position:absolute;inset:0;border-radius:2px 8px 8px 2px;overflow:hidden;
+  background:linear-gradient(160deg,#0A0900 0%,#1C1600 30%,#2A2200 55%,#1C1600 80%,#0A0900 100%)}
+.bk-front::after{content:'';position:absolute;left:0;top:0;width:40%;height:100%;
+  background:linear-gradient(90deg,rgba(196,162,74,.06),transparent)}
+.bk-gold-border{position:absolute;inset:8px;border:1px solid rgba(196,162,74,.35);border-radius:2px 4px 4px 2px;pointer-events:none}
+.bk-gold-border::before{content:'';position:absolute;inset:5px;
+  border:1px solid rgba(196,162,74,.15);border-radius:1px 3px 3px 1px}
+.bk-spine{position:absolute;left:-14px;top:0;width:14px;height:305px;
+  background:linear-gradient(90deg,#050400,#120F00,#1A1600);border-radius:3px 0 0 3px}
+.bk-pages{position:absolute;right:-6px;top:5px;bottom:5px;width:6px;
+  background:repeating-linear-gradient(to bottom,#EDE8DC 0,#EDE8DC 1.5px,#E0DACE 1.5px,#E0DACE 3px);
+  border-radius:0 2px 2px 0;opacity:.75}
+.bk-inner{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;padding:22px 18px;text-align:center}
+.bk-top-orn{display:flex;align-items:center;justify-content:center;gap:6px;margin-bottom:18px}
+.bk-top-orn span{width:22px;height:1px;background:rgba(196,162,74,.5)}
+.bk-top-orn i{font-style:normal;font-size:10px;color:rgba(196,162,74,.6)}
+.bk-eyebrow{font-family:var(--sans);font-size:7.5px;letter-spacing:3.5px;
+  text-transform:uppercase;color:rgba(196,162,74,.5);margin-bottom:12px}
+.bk-title{font-family:var(--serif);font-size:34px;font-weight:900;color:var(--gold3);
+  line-height:1;letter-spacing:1px;
+  text-shadow:0 0 24px rgba(196,162,74,.4),0 1px 4px rgba(0,0,0,.8)}
+.bk-rule{width:36px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:12px auto}
+.bk-sub{font-family:var(--serif);font-size:11.5px;font-style:italic;
+  color:rgba(196,162,74,.6);line-height:1.55;margin-bottom:16px}
+.bk-divider{display:flex;align-items:center;gap:6px;margin-bottom:14px}
+.bk-divider::before,.bk-divider::after{content:'';flex:1;height:1px;background:rgba(196,162,74,.2)}
+.bk-divider i{font-style:normal;font-size:8px;color:rgba(196,162,74,.4)}
+.bk-desc{font-family:var(--sans);font-size:8px;letter-spacing:.5px;
+  color:rgba(196,162,74,.35);line-height:1.8}
+.bk-brand{position:absolute;bottom:16px;font-family:var(--sans);font-size:7px;
+  letter-spacing:2.5px;color:rgba(196,162,74,.25);text-transform:uppercase}
 
-/* ══ BOOK MOCKUP ══ */
-.book-scene{position:relative;width:280px;height:380px;margin:0 auto;
-  filter:drop-shadow(0 40px 80px rgba(212,40,112,.35)) drop-shadow(-10px 20px 40px rgba(0,0,0,.6))}
-.book{width:240px;height:340px;position:relative;transform:perspective(800px) rotateY(-16deg) rotateX(3deg);
-  margin:0 auto;transition:transform .5s ease}
-.book:hover{transform:perspective(800px) rotateY(-8deg) rotateX(0)}
-.book-front{position:absolute;inset:0;border-radius:3px 10px 10px 3px;overflow:hidden;
-  background:linear-gradient(145deg,#140230 0%,#3A0875 20%,#6A12A0 45%,#9A1890 65%,#C82A60 85%,#D44070 100%)}
-.book-front::before{content:'';position:absolute;left:0;top:0;width:12px;height:100%;
-  background:linear-gradient(90deg,rgba(0,0,0,.4),transparent)}
-.book-front::after{content:'';position:absolute;top:0;left:10px;width:35%;height:100%;
-  background:linear-gradient(90deg,rgba(255,255,255,.06),transparent)}
-.book-spine{position:absolute;left:-16px;top:0;width:16px;height:340px;
-  background:linear-gradient(90deg,#060010,#0E0220,#160330);border-radius:4px 0 0 4px}
-.book-pages{position:absolute;right:-8px;top:6px;bottom:6px;width:8px;
-  background:repeating-linear-gradient(to bottom,#EDE4D8 0,#EDE4D8 1.5px,#F5EFE6 1.5px,#F5EFE6 3px);
-  border-radius:0 2px 2px 0;opacity:.8}
-.book-inner{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;
-  align-items:center;justify-content:center;padding:24px 20px;text-align:center}
-.book-ornament{display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:20px}
-.book-ornament span{width:28px;height:1px;background:rgba(255,210,240,.4)}
-.book-ornament i{color:rgba(255,200,240,.6);font-style:normal;font-size:13px}
-.book-label{font-family:var(--sans);font-size:8px;letter-spacing:3px;text-transform:uppercase;
-  color:rgba(255,210,240,.55);margin-bottom:14px}
-.book-title{font-family:var(--serif);font-size:32px;font-weight:900;color:#FFF;
-  line-height:1.05;text-shadow:0 0 30px rgba(255,120,200,.8),0 2px 8px rgba(0,0,0,.5);
-  margin-bottom:6px}
-.book-subtitle{font-family:var(--serif);font-size:13px;font-style:italic;
-  color:rgba(255,180,220,.7);margin-bottom:18px}
-.book-rule{width:40px;height:1.5px;background:linear-gradient(90deg,transparent,rgba(255,160,200,.6),transparent);margin:0 auto 16px}
-.book-desc{font-family:var(--sans);font-size:9px;letter-spacing:1px;
-  color:rgba(255,210,240,.4);line-height:1.7}
-.book-brand{position:absolute;bottom:18px;font-family:var(--sans);font-size:8px;
-  letter-spacing:2px;color:rgba(255,210,240,.3);text-transform:uppercase}
+/* ══ PAIN SECTION ══ */
+.pain{padding:100px 48px;background:var(--bg2)}
+.pain-inner{max-width:900px;margin:0 auto}
+.pain-headline{font-family:var(--serif);font-size:clamp(28px,4vw,48px);font-weight:900;
+  line-height:1.15;margin-bottom:56px;color:var(--text)}
+.pain-headline em{font-style:italic;color:var(--gold2)}
+.pain-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;
+  background:var(--border2);border:1px solid var(--border2)}
+.pain-item{background:var(--bg2);padding:36px 32px}
+.pain-item:hover{background:var(--bg3)}
+.pain-num{font-family:var(--serif);font-size:11px;color:var(--gold);
+  letter-spacing:2px;margin-bottom:12px;opacity:.7}
+.pain-txt{font-family:var(--serif);font-size:clamp(18px,2.5vw,24px);font-weight:700;
+  color:var(--text);line-height:1.35;margin-bottom:10px}
+.pain-txt em{font-style:italic;color:rgba(250,250,248,.45)}
+.pain-sub{font-size:14px;color:var(--text3);line-height:1.7}
 
-/* ══ PROOF STRIP ══ */
-.strip{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);
-  padding:20px 40px}
-.strip-inner{max-width:900px;margin:0 auto;display:flex;justify-content:space-around;align-items:center;flex-wrap:wrap;gap:20px}
-.strip-item{text-align:center}
-.strip-num{font-family:var(--serif);font-size:28px;font-weight:900;
-  background:linear-gradient(135deg,var(--blush),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.strip-lbl{font-size:11px;color:var(--text3);letter-spacing:.5px;margin-top:2px}
-
-/* ══ HOOK — opening narrative ══ */
-.hook{padding:100px 40px;background:linear-gradient(180deg,var(--bg2) 0%,var(--bg3) 100%)}
-.hook-inner{max-width:780px;margin:0 auto;text-align:center}
-.sec-label{font-size:10px;letter-spacing:3.5px;color:var(--blush);text-transform:uppercase;
-  margin-bottom:14px;display:flex;align-items:center;justify-content:center;gap:12px}
-.sec-label::before,.sec-label::after{content:'';width:24px;height:1px;background:var(--blush);opacity:.5}
-.hook h2{font-family:var(--serif);font-size:clamp(28px,4vw,44px);font-weight:700;
+/* ══ HOOK / COMPASS ══ */
+.compass{padding:100px 48px;background:var(--bg);text-align:center;position:relative;overflow:hidden}
+.compass::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:600px;height:600px;border-radius:50%;
+  background:radial-gradient(circle,rgba(196,162,74,.04) 0%,transparent 70%);pointer-events:none}
+.compass-inner{position:relative;z-index:1;max-width:680px;margin:0 auto}
+.sec-tag{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);
+  margin-bottom:16px;display:flex;align-items:center;justify-content:center;gap:12px}
+.sec-tag::before,.sec-tag::after{content:'';width:20px;height:1px;background:var(--gold);opacity:.5}
+.compass h2{font-family:var(--serif);font-size:clamp(28px,4vw,46px);font-weight:900;
   line-height:1.15;margin-bottom:24px;color:var(--text)}
-.hook h2 em{font-style:italic;color:var(--blush)}
-.hook-p{font-size:17px;color:var(--text2);line-height:1.85;margin-bottom:18px;text-align:left}
-.hook-p:first-of-type::first-letter{font-family:var(--serif);font-size:64px;font-weight:900;
-  color:var(--rose);float:left;line-height:.8;margin:4px 10px 0 0}
-.hook-quote{margin:36px 0;padding:28px 36px;background:rgba(212,40,112,.06);
-  border-left:3px solid var(--rose);border-radius:0 10px 10px 0}
-.hook-quote p{font-family:var(--serif);font-size:20px;font-style:italic;font-weight:500;
-  color:var(--blush);line-height:1.55}
+.compass h2 em{font-style:italic;color:var(--gold2)}
+.compass-p{font-size:17px;color:var(--text2);line-height:1.8;margin-bottom:20px}
+.compass-quote{margin:40px 0;padding:32px 44px;
+  background:linear-gradient(135deg,rgba(196,162,74,.05),rgba(196,162,74,.02));
+  border:1px solid var(--border);border-radius:2px;position:relative}
+.compass-quote::before{content:'"';font-family:var(--serif);font-size:88px;font-weight:900;
+  position:absolute;top:-20px;left:24px;color:var(--gold);opacity:.12;line-height:1}
+.compass-quote p{font-family:var(--serif);font-size:clamp(18px,2.5vw,24px);
+  font-style:italic;font-weight:700;color:var(--warm);line-height:1.5;position:relative;z-index:1}
 
-/* ══ PAIN CARDS ══ */
-.pain{padding:80px 40px;background:var(--bg)}
-.pain-inner{max-width:1100px;margin:0 auto}
-.section-head{text-align:center;margin-bottom:56px}
-.section-head h2{font-family:var(--serif);font-size:clamp(26px,3.5vw,40px);font-weight:700;
-  line-height:1.2;margin-top:12px}
-.section-head h2 em{font-style:italic;color:var(--rose)}
-.section-head p{font-size:16px;color:var(--text2);max-width:580px;margin:16px auto 0}
-.pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.pain-card{background:rgba(255,255,255,.025);border:1px solid var(--border2);
-  border-radius:14px;padding:28px 24px;transition:border-color .3s,transform .3s}
-.pain-card:hover{border-color:var(--border);transform:translateY(-3px)}
-.pain-icon{font-size:28px;margin-bottom:14px}
-.pain-title{font-family:var(--serif);font-size:17px;font-weight:700;color:var(--text);margin-bottom:8px}
-.pain-body{font-size:14px;color:var(--text2);line-height:1.75}
+/* ══ 8 PARTS ══ */
+.parts{padding:90px 48px;background:var(--bg3)}
+.parts-inner{max-width:1100px;margin:0 auto}
+.parts-head{margin-bottom:56px}
+.parts-head h2{font-family:var(--serif);font-size:clamp(26px,3.5vw,40px);font-weight:900;
+  line-height:1.15;margin-top:12px}
+.parts-head h2 em{font-style:italic;color:var(--gold2)}
+.parts-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--border2)}
+.part-card{background:var(--bg3);padding:28px 28px 28px 0;display:flex;gap:20px;
+  border-left:3px solid transparent;transition:background .25s,border-color .25s;
+  padding-left:28px}
+.part-card:hover{background:var(--bg4);border-left-color:var(--gold)}
+.part-n{font-family:var(--serif);font-size:36px;font-weight:900;
+  color:rgba(196,162,74,.14);min-width:46px;flex-shrink:0;line-height:1;
+  transition:color .25s}
+.part-card:hover .part-n{color:rgba(196,162,74,.3)}
+.part-content{}
+.part-label{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);opacity:.7;margin-bottom:4px}
+.part-title{font-family:var(--serif);font-size:17px;font-weight:700;color:var(--text);
+  line-height:1.25;margin-bottom:6px}
+.part-desc{font-size:13px;color:var(--text3);line-height:1.65}
 
-/* ══ BRIDGE ══ */
-.bridge{padding:80px 40px;background:linear-gradient(135deg,#0D0520,#180840,#0D0520);
-  border-top:1px solid var(--border2);border-bottom:1px solid var(--border2)}
-.bridge-inner{max-width:700px;margin:0 auto;text-align:center}
-.bridge h2{font-family:var(--serif);font-size:clamp(26px,3.5vw,40px);font-weight:700;line-height:1.2;margin-bottom:20px}
-.bridge h2 em{font-style:italic;color:var(--gold)}
-.bridge p{font-size:16px;color:var(--text2);line-height:1.85;margin-bottom:16px}
-.bridge-highlight{font-family:var(--serif);font-size:20px;font-style:italic;color:var(--blush);
-  margin:30px 0;padding:24px 32px;background:rgba(212,40,112,.06);border-radius:12px;
-  border:1px solid rgba(212,40,112,.15)}
-
-/* ══ CHAPTERS ══ */
-.chapters{padding:90px 40px;background:var(--bg2)}
-.chapters-inner{max-width:1100px;margin:0 auto}
-.chapters-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:56px}
-.ch-card{background:rgba(255,255,255,.025);border:1px solid var(--border2);
-  border-radius:14px;padding:30px 28px;display:flex;gap:20px;
-  transition:border-color .3s,background .3s,transform .3s}
-.ch-card:hover{border-color:rgba(212,40,112,.35);background:rgba(212,40,112,.04);transform:translateY(-2px)}
-.ch-num{font-family:var(--serif);font-size:42px;font-weight:900;line-height:1;
-  color:rgba(212,40,112,.18);min-width:52px;flex-shrink:0;padding-top:2px;
-  transition:color .3s}
-.ch-card:hover .ch-num{color:rgba(212,40,112,.35)}
-.ch-body{}
-.ch-tag{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--blush);margin-bottom:6px}
-.ch-title{font-family:var(--serif);font-size:18px;font-weight:700;color:var(--text);
-  line-height:1.25;margin-bottom:8px}
-.ch-title em{font-style:italic;color:var(--blush)}
-.ch-desc{font-size:13.5px;color:var(--text2);line-height:1.7}
-
-/* ══ QUOTES ══ */
-.quotes{padding:90px 40px;background:var(--bg3)}
-.quotes-inner{max-width:900px;margin:0 auto}
-.quotes-grid{display:flex;flex-direction:column;gap:32px;margin-top:56px}
-.quote-card{padding:36px 44px;border-radius:14px;position:relative;overflow:hidden}
-.quote-card:nth-child(odd){background:rgba(139,50,208,.07);border:1px solid rgba(139,50,208,.2)}
-.quote-card:nth-child(even){background:rgba(212,40,112,.06);border:1px solid rgba(212,40,112,.18)}
-.quote-mark{font-family:var(--serif);font-size:80px;font-weight:900;
-  position:absolute;top:-10px;left:24px;line-height:1;opacity:.1;color:var(--rose)}
-.quote-text{font-family:var(--serif);font-size:clamp(17px,2.5vw,22px);font-style:italic;
-  font-weight:500;color:var(--text);line-height:1.55;position:relative;z-index:1}
-.quote-src{margin-top:14px;font-size:11px;letter-spacing:2px;text-transform:uppercase;
-  color:var(--text3);font-style:normal}
-
-/* ══ WHO THIS IS FOR ══ */
-.who{padding:80px 40px;background:var(--bg)}
-.who-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
-.who-list{list-style:none;margin-top:28px;display:flex;flex-direction:column;gap:14px}
-.who-list li{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:var(--text2);line-height:1.65}
-.who-list li::before{content:'✦';color:var(--rose);font-size:10px;margin-top:6px;flex-shrink:0}
-.who-not{margin-top:32px;padding:20px 24px;background:rgba(255,255,255,.03);
-  border-radius:10px;border:1px solid var(--border2)}
-.who-not p{font-size:14px;color:var(--text3);line-height:1.7}
+/* ══ FEATURED QUOTES ══ */
+.fquotes{padding:90px 48px;background:var(--bg2)}
+.fq-inner{max-width:800px;margin:0 auto}
+.fq-grid{display:flex;flex-direction:column;gap:48px;margin-top:56px}
+.fq{padding:40px 0;border-bottom:1px solid var(--border2)}
+.fq:last-child{border-bottom:none}
+.fq-text{font-family:var(--serif);font-size:clamp(22px,3.5vw,32px);font-weight:700;
+  font-style:italic;line-height:1.3;color:var(--text);margin-bottom:12px}
+.fq-text em{color:var(--gold2);font-style:italic}
+.fq-from{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--text3)}
 
 /* ══ TESTIMONIALS ══ */
-.testi{padding:90px 40px;background:var(--bg2)}
+.testi{padding:80px 48px;background:var(--bg)}
 .testi-inner{max-width:1100px;margin:0 auto}
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px}
-.t-card{background:rgba(255,255,255,.03);border:1px solid var(--border2);
-  border-radius:14px;padding:28px 24px;display:flex;flex-direction:column}
-.t-stars{color:var(--gold);font-size:14px;margin-bottom:14px;letter-spacing:2px}
-.t-text{font-family:var(--serif);font-size:15px;font-style:italic;color:var(--text2);
-  line-height:1.7;flex:1;margin-bottom:20px}
-.t-name{font-size:13px;font-weight:600;color:var(--text)}
-.t-role{font-size:11px;color:var(--text3);margin-top:2px}
-
-/* ══ WHAT YOU GET ══ */
-.gets{padding:90px 40px;background:var(--bg3)}
-.gets-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.gets-list{list-style:none;margin-top:28px;display:flex;flex-direction:column;gap:14px}
-.gets-list li{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:var(--text2);line-height:1.65}
-.gets-check{width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,var(--violet2),var(--pink));
-  display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11px;margin-top:1px}
-.gets-price-box{background:rgba(212,40,112,.06);border:2px solid rgba(212,40,112,.3);
-  border-radius:16px;padding:36px 32px;text-align:center}
-.gets-price-old{font-size:14px;color:var(--text3);text-decoration:line-through;margin-bottom:4px}
-.gets-price{font-family:var(--serif);font-size:52px;font-weight:900;
-  background:linear-gradient(135deg,var(--gold),var(--gold2));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1.1}
-.gets-price-note{font-size:12px;color:var(--text3);margin-top:6px;margin-bottom:24px}
-.gets-btn{width:100%;background:linear-gradient(135deg,var(--violet2),var(--pink));
-  color:#fff;border:none;padding:16px;border-radius:8px;font-family:var(--sans);
-  font-size:16px;font-weight:700;cursor:pointer;
-  box-shadow:0 8px 30px rgba(212,40,112,.4);transition:transform .2s,box-shadow .2s}
-.gets-btn:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(212,40,112,.55)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:52px}
+.tc{background:var(--bg2);border:1px solid var(--border2);border-radius:4px;padding:28px 24px;
+  display:flex;flex-direction:column;transition:border-color .3s}
+.tc:hover{border-color:var(--border)}
+.tc-stars{color:var(--gold);font-size:13px;letter-spacing:3px;margin-bottom:14px}
+.tc-text{font-family:var(--serif);font-size:15px;font-style:italic;
+  color:var(--text2);line-height:1.7;flex:1;margin-bottom:20px}
+.tc-name{font-size:13px;font-weight:600;color:var(--text)}
+.tc-role{font-size:11px;color:var(--text3);margin-top:3px}
 
 /* ══ PRICING ══ */
-.pricing{padding:100px 40px;background:linear-gradient(160deg,#0D0520,#1A0840,#100628)}
-.pricing-inner{max-width:700px;margin:0 auto;text-align:center}
-.pricing h2{font-family:var(--serif);font-size:clamp(28px,4vw,44px);font-weight:900;
+.pricing{padding:100px 48px;background:linear-gradient(180deg,var(--bg3),var(--bg))}
+.pricing-inner{max-width:660px;margin:0 auto;text-align:center}
+.pricing h2{font-family:var(--serif);font-size:clamp(26px,4vw,42px);font-weight:900;
   line-height:1.15;margin-bottom:12px}
-.pricing h2 em{font-style:italic;color:var(--rose)}
-.pricing-sub{font-size:16px;color:var(--text2);margin-bottom:48px}
-.countdown-wrap{display:flex;align-items:center;justify-content:center;gap:8px;
-  margin-bottom:36px;background:rgba(255,255,255,.04);border:1px solid var(--border);
-  border-radius:12px;padding:16px 24px}
-.cd-lbl{font-size:11px;color:var(--text3);margin-right:4px}
-.cd-block{background:rgba(0,0,0,.3);border-radius:6px;padding:8px 12px;
-  font-family:var(--serif);font-size:24px;font-weight:900;color:var(--text);min-width:52px;text-align:center}
-.cd-sep{font-size:20px;color:var(--text3)}
-.pricing-box{background:rgba(255,255,255,.03);border:2px solid rgba(212,40,112,.35);
-  border-radius:20px;padding:48px 40px;margin-bottom:32px;position:relative;overflow:hidden}
-.pricing-box::before{content:'✨ Ưu đãi ra mắt';position:absolute;top:16px;right:-28px;
-  background:linear-gradient(135deg,var(--pink),var(--rose));color:#fff;
-  font-size:11px;font-weight:700;padding:4px 48px;letter-spacing:1px;
-  transform:rotate(45deg);white-space:nowrap}
-.p-old{font-size:15px;color:var(--text3);text-decoration:line-through;margin-bottom:8px}
-.p-price{font-family:var(--serif);font-size:72px;font-weight:900;line-height:1;
-  background:linear-gradient(135deg,var(--gold),var(--gold2));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px}
-.p-unit{font-size:16px;color:var(--text3);margin-bottom:28px}
-.p-includes{list-style:none;text-align:left;margin-bottom:32px;display:flex;flex-direction:column;gap:10px}
-.p-includes li{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text2)}
-.p-includes li::before{content:'✓';color:var(--gold);font-weight:700;flex-shrink:0}
-.p-btn{width:100%;background:linear-gradient(135deg,var(--violet2),var(--pink));
-  color:#fff;border:none;padding:18px;border-radius:10px;font-family:var(--sans);
-  font-size:17px;font-weight:700;cursor:pointer;letter-spacing:.3px;
-  box-shadow:0 10px 40px rgba(212,40,112,.45);transition:transform .2s,box-shadow .2s}
-.p-btn:hover{transform:translateY(-2px);box-shadow:0 14px 50px rgba(212,40,112,.6)}
-.p-micro{font-size:12px;color:var(--text3);margin-top:14px;line-height:1.7}
+.pricing h2 em{font-style:italic;color:var(--gold2)}
+.pricing-sub{font-size:15px;color:var(--text3);margin-bottom:44px}
+
+/* countdown in pricing */
+.p-cd{display:flex;align-items:center;justify-content:center;gap:6px;
+  margin-bottom:36px;flex-wrap:wrap}
+.p-cd-lbl{font-size:12px;color:var(--text3);margin-right:4px}
+.p-cd-block{background:var(--bg2);border:1px solid var(--border);border-radius:4px;
+  padding:10px 14px;font-family:var(--serif);font-size:26px;font-weight:900;
+  color:var(--gold3);min-width:56px;text-align:center;line-height:1}
+.p-cd-sep{font-size:22px;color:var(--gold);font-weight:700}
+.p-cd-unit{font-size:10px;letter-spacing:1px;text-transform:uppercase;
+  color:var(--text3);display:block;margin-top:4px;font-family:var(--sans);font-weight:400}
+
+.pricing-box{background:var(--bg2);border:1px solid var(--border);
+  border-radius:4px;padding:48px 40px;margin-bottom:0;position:relative;overflow:hidden;text-align:center}
+.pricing-box::before{content:'ƯU ĐÃI RA MẮT';position:absolute;top:18px;right:-30px;
+  background:var(--gold);color:#080807;font-size:10px;font-weight:700;
+  padding:4px 52px;letter-spacing:1.5px;transform:rotate(45deg);white-space:nowrap}
+.p-was{font-size:14px;color:var(--text3);text-decoration:line-through;margin-bottom:6px}
+.p-price{font-family:var(--serif);font-size:80px;font-weight:900;line-height:1;
+  color:var(--gold2);margin-bottom:6px}
+.p-unit{font-size:14px;color:var(--text3);margin-bottom:28px}
+.p-list{list-style:none;text-align:left;margin-bottom:32px;display:flex;flex-direction:column;gap:10px}
+.p-list li{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text2)}
+.p-list li::before{content:'✓';color:var(--gold);font-weight:700;flex-shrink:0;width:16px}
+.p-btn{width:100%;background:var(--gold);color:#080807;border:none;padding:18px;
+  border-radius:5px;font-family:var(--sans);font-size:17px;font-weight:700;
+  cursor:pointer;letter-spacing:.3px;
+  box-shadow:0 8px 30px rgba(196,162,74,.3);transition:background .2s,transform .2s,box-shadow .2s}
+.p-btn:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 12px 40px rgba(196,162,74,.4)}
+.p-micro{font-size:12px;color:var(--text3);margin-top:16px;line-height:1.8}
 
 /* ══ FAQ ══ */
-.faq{padding:90px 40px;background:var(--bg)}
-.faq-inner{max-width:750px;margin:0 auto}
-.faq-list{margin-top:48px;display:flex;flex-direction:column;gap:12px}
-.faq-item{background:rgba(255,255,255,.025);border:1px solid var(--border2);
-  border-radius:12px;overflow:hidden;transition:border-color .3s}
-.faq-item.open{border-color:var(--border)}
-.faq-q{padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;
-  font-size:15px;font-weight:600;color:var(--text);line-height:1.45;transition:color .2s}
-.faq-q:hover{color:var(--blush)}
-.faq-arrow{font-size:18px;color:var(--rose);flex-shrink:0;transition:transform .3s}
-.faq-item.open .faq-arrow{transform:rotate(45deg)}
-.faq-a{display:none;padding:0 24px 20px;font-size:14px;color:var(--text2);line-height:1.75;border-top:1px solid var(--border2)}
+.faq{padding:80px 48px;background:var(--bg)}
+.faq-inner{max-width:720px;margin:0 auto}
+.faq-list{margin-top:48px}
+.faq-item{border-bottom:1px solid var(--border2)}
+.faq-q{padding:20px 0;cursor:pointer;display:flex;justify-content:space-between;
+  align-items:center;gap:16px;font-size:15px;font-weight:500;color:var(--text2);
+  line-height:1.5;transition:color .2s}
+.faq-q:hover,.faq-item.open .faq-q{color:var(--text)}
+.faq-icon{font-size:18px;color:var(--gold);flex-shrink:0;transition:transform .3s;font-style:normal}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{display:none;padding:0 0 20px;font-size:14px;color:var(--text3);line-height:1.8}
 .faq-item.open .faq-a{display:block}
 
 /* ══ FOOTER ══ */
-.footer{padding:48px 40px;background:var(--bg3);border-top:1px solid var(--border2)}
+.footer{padding:48px;background:var(--bg2);border-top:1px solid var(--border2)}
 .footer-inner{max-width:900px;margin:0 auto;display:flex;justify-content:space-between;
   align-items:flex-start;gap:32px;flex-wrap:wrap}
-.footer-brand{font-family:var(--serif);font-size:18px;font-style:italic;
-  background:linear-gradient(135deg,#FBF5FF,var(--gold));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px}
-.footer-info{font-size:12px;color:var(--text3);line-height:2}
-.footer-links{display:flex;flex-direction:column;gap:6px}
-.footer-links a{font-size:13px;color:var(--text3);text-decoration:none;transition:color .2s}
-.footer-links a:hover{color:var(--blush)}
+.footer-brand{font-family:var(--serif);font-size:20px;font-style:italic;
+  color:var(--gold);margin-bottom:10px}
+.footer-info{font-size:12px;color:var(--text3);line-height:2.2}
+.footer-links a{display:block;font-size:12px;color:var(--text3);text-decoration:none;
+  margin-bottom:6px;transition:color .2s}
+.footer-links a:hover{color:var(--gold2)}
 
 /* ══ MODAL ══ */
-.modal{position:fixed;inset:0;z-index:500;background:rgba(7,3,18,.85);
-  backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:center;
+.modal{position:fixed;inset:0;z-index:500;background:rgba(8,8,7,.88);
+  backdrop-filter:blur(16px);display:flex;align-items:center;justify-content:center;
   padding:20px;opacity:0;pointer-events:none;transition:opacity .3s}
 .modal.open{opacity:1;pointer-events:auto}
-.modal-box{background:var(--bg3);border:1px solid var(--border);border-radius:18px;
-  width:100%;max-width:480px;max-height:90vh;overflow-y:auto;
-  box-shadow:0 32px 80px rgba(0,0,0,.7)}
+.modal-box{background:var(--bg3);border:1px solid var(--border);border-radius:8px;
+  width:100%;max-width:460px;max-height:90vh;overflow-y:auto;
+  box-shadow:0 32px 80px rgba(0,0,0,.8)}
 .modal-head{padding:24px 28px 0;display:flex;justify-content:space-between;align-items:center}
 .modal-title{font-family:var(--serif);font-size:18px;font-weight:700;color:var(--text)}
-.modal-close{background:none;border:none;cursor:pointer;color:var(--text3);font-size:22px;
-  line-height:1;transition:color .2s;padding:4px}
+.modal-close{background:none;border:none;cursor:pointer;color:var(--text3);font-size:22px;line-height:1;padding:4px;transition:color .2s}
 .modal-close:hover{color:var(--text)}
 .modal-body{padding:20px 28px 28px}
-.m-label{display:block;font-size:12px;font-weight:600;color:var(--text2);
-  letter-spacing:.5px;margin-bottom:6px;margin-top:16px}
+.m-label{display:block;font-size:12px;font-weight:600;letter-spacing:.5px;
+  color:var(--text2);margin-bottom:6px;margin-top:16px}
 .m-label:first-child{margin-top:0}
-.m-input{width:100%;background:rgba(255,255,255,.05);border:1px solid var(--border2);
-  border-radius:8px;padding:12px 14px;color:var(--text);font-family:var(--sans);
+.m-input{width:100%;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);
+  border-radius:5px;padding:11px 14px;color:var(--text);font-family:var(--sans);
   font-size:14px;outline:none;transition:border-color .2s}
-.m-input:focus{border-color:var(--violet)}
-.m-btn{width:100%;margin-top:20px;background:linear-gradient(135deg,var(--violet2),var(--pink));
-  color:#fff;border:none;padding:15px;border-radius:8px;font-family:var(--sans);
-  font-size:15px;font-weight:700;cursor:pointer;transition:opacity .2s}
-.m-btn:hover{opacity:.9}
-.m-btn:disabled{opacity:.5;cursor:not-allowed}
+.m-input:focus{border-color:var(--gold)}
+.m-btn{width:100%;margin-top:18px;background:var(--gold);color:#080807;border:none;
+  padding:14px;border-radius:5px;font-family:var(--sans);font-size:15px;font-weight:700;
+  cursor:pointer;transition:background .2s}
+.m-btn:hover{background:var(--gold2)}
+.m-btn:disabled{opacity:.4;cursor:not-allowed}
 .m-micro{font-size:11px;color:var(--text3);text-align:center;margin-top:10px;line-height:1.6}
 .qr-wrap{text-align:center;margin-bottom:20px}
-.qr-wrap img{width:200px;height:200px;border-radius:12px;border:2px solid var(--border);
-  opacity:0;transition:opacity .4s}
-.bank-info{background:rgba(255,255,255,.04);border:1px solid var(--border2);border-radius:10px;padding:16px;margin-bottom:14px}
-.bi-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;
-  border-bottom:1px solid rgba(139,50,208,.08);font-size:13px}
+.qr-wrap img{width:200px;height:200px;border-radius:8px;border:1px solid var(--border2);opacity:0;transition:opacity .4s}
+.bank-info{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:6px;padding:14px;margin-bottom:14px}
+.bi-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;
+  border-bottom:1px solid rgba(255,255,255,.04);font-size:13px}
 .bi-row:last-child{border-bottom:none}
 .bi-lbl{color:var(--text3)}
 .bi-val{color:var(--text);font-weight:600;text-align:right}
-.highlight{color:var(--rose)!important}
-.status-bar{background:rgba(255,255,255,.04);border:1px solid var(--border2);border-radius:8px;
-  padding:12px 16px;display:flex;align-items:center;gap:10px;font-size:13px;color:var(--text2)}
-.spinner{width:16px;height:16px;border:2px solid rgba(212,40,112,.3);
-  border-top-color:var(--rose);border-radius:50%;animation:spin .8s linear infinite;flex-shrink:0}
+.highlight{color:var(--gold2)!important}
+.status-bar{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);
+  border-radius:6px;padding:12px 16px;display:flex;align-items:center;gap:10px;
+  font-size:13px;color:var(--text2)}
+.spinner{width:15px;height:15px;border:2px solid rgba(196,162,74,.3);
+  border-top-color:var(--gold2);border-radius:50%;animation:spin .8s linear infinite;flex-shrink:0}
 @keyframes spin{to{transform:rotate(360deg)}}
 .poll-note{font-size:11px;color:var(--text3);text-align:center;margin-top:10px;line-height:1.7}
-.s3-wrap{text-align:center;padding:20px 0}
-.s3-icon{font-size:48px;display:block;margin-bottom:12px}
+.s3-wrap{text-align:center;padding:16px 0}
+.s3-icon{font-size:44px;display:block;margin-bottom:12px}
 .s3-title{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--text);margin-bottom:8px}
-.s3-sub{font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:20px}
-.s3-btn{display:block;background:linear-gradient(135deg,var(--violet2),var(--pink));
-  color:#fff;padding:14px 24px;border-radius:8px;text-decoration:none;
-  font-size:15px;font-weight:700;margin-bottom:16px;transition:opacity .2s}
-.s3-btn:hover{opacity:.9}
-.s3-warn{background:linear-gradient(135deg,#fff8e1,#fff3cd);border:2px solid #f59e0b;
-  border-radius:10px;padding:14px 18px;margin:12px 0 8px;text-align:left}
-.s3-warn-title{font-size:12px;font-weight:800;color:#b45309;letter-spacing:.04em;
-  text-transform:uppercase;margin-bottom:5px}
-.s3-warn-body{font-size:12px;color:#92400e;line-height:1.75;font-weight:500}
+.s3-sub{font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:18px}
+.s3-btn{display:block;background:var(--gold);color:#080807;padding:13px 22px;
+  border-radius:5px;text-decoration:none;font-size:15px;font-weight:700;
+  margin-bottom:14px;transition:background .2s}
+.s3-btn:hover{background:var(--gold2)}
+.s3-warn{background:#FFF8E1;border:1.5px solid #F59E0B;border-radius:6px;
+  padding:12px 16px;margin:10px 0 8px;text-align:left}
+.s3-warn-title{font-size:11px;font-weight:800;color:#B45309;letter-spacing:.04em;text-transform:uppercase;margin-bottom:4px}
+.s3-warn-body{font-size:12px;color:#92400e;line-height:1.75}
 .s3-note{font-size:11px;color:var(--text3);line-height:1.8}
 
-/* ══ SCROLL REVEAL ══ */
-.rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+/* ══ REVEAL ══ */
+.rv{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease}
 .rv.in{opacity:1;transform:none}
 
 /* ══ RESPONSIVE ══ */
 @media(max-width:900px){
-  .hdr{padding:0 20px}
-  .hero-inner{grid-template-columns:1fr;gap:48px;padding:100px 20px 60px}
-  .book-scene{order:-1}
-  .pain-grid{grid-template-columns:1fr 1fr}
-  .chapters-grid{grid-template-columns:1fr}
-  .who-inner,.gets-inner{grid-template-columns:1fr;gap:36px}
+  .hdr,.hero-inner,.pain,.compass,.parts,.fquotes,.testi,.pricing,.faq,.footer{padding-left:20px;padding-right:20px}
+  .hero-inner{grid-template-columns:1fr;gap:48px;padding-top:90px}
+  .book-wrap{order:-1}
+  .pain-grid,.parts-grid{grid-template-columns:1fr}
   .testi-grid{grid-template-columns:1fr}
-  .hook,.pain,.bridge,.chapters,.quotes,.who,.testi,.gets,.pricing,.faq,.footer{padding-left:20px;padding-right:20px}
-  .strip{padding:20px}
+  .pricing-box{padding:32px 20px}
+  .p-price{font-size:60px}
+  .float-cta-inner{padding:10px 18px 10px 14px;gap:10px}
 }
 @media(max-width:600px){
-  .hdr-logo{font-size:17px}
-  .hdr-cta{font-size:12px;padding:9px 16px}
-  .pain-grid{grid-template-columns:1fr}
-  .pricing-box{padding:32px 20px}
-  .p-price{font-size:56px}
-  .hero-cta-wrap{flex-direction:column;align-items:flex-start}
+  .hdr{padding:0 16px}
+  .hdr-count{display:none}
+  .pain-item{padding:24px 20px}
+  .part-card{padding:22px 16px}
+  .promo-bar{gap:8px;font-size:12px}
 }
 </style>
 </head>
@@ -399,268 +366,219 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:999;
 
 <div id="pg"></div>
 
+<!-- ══ PROMO BANNER ══ -->
+<div class="promo-bar">
+  <span>⏳ Ưu đãi ra mắt: Giảm từ <strong>199k → 99k</strong> — còn</span>
+  <div class="promo-cd">
+    <div class="pcd" id="pb-h">00</div><span class="pcd-sep">:</span>
+    <div class="pcd" id="pb-m">00</div><span class="pcd-sep">:</span>
+    <div class="pcd" id="pb-s">00</div>
+  </div>
+  <span>nữa hết ưu đãi</span>
+</div>
+
 <!-- ══ HEADER ══ -->
 <header class="hdr">
-  <div class="hdr-brand">
-    <div class="hdr-logo">Đại Nữ Chủ</div>
-    <div class="hdr-count">✨ <strong id="hdr-buyers">399</strong> người đã bắt đầu hành trình</div>
+  <div class="hdr-brand">Đại Nữ Chủ</div>
+  <div class="hdr-right">
+    <span class="hdr-count">✦ <strong id="hdr-buyers">399</strong> người đã nhận</span>
+    <button class="hdr-btn" onclick="openModal()">Nhận ngay — 99k</button>
   </div>
-  <button class="hdr-cta" onclick="openModal()">Nhận ngay — 99k</button>
 </header>
 
-<!-- ══ HERO ══ -->
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="orb orb1"></div><div class="orb orb2"></div><div class="orb orb3"></div>
-  <div class="hero-inner">
-    <div>
-      <p class="hero-label">Cẩm Nang Tịnh Thức · 8 Chương Hành Trình</p>
-      <h1 class="hero-h1">Đã đến lúc ngừng<br><em>sống cuộc đời<br>của người khác</em></h1>
-      <p class="hero-sub">Có một kiểu mệt mỏi không có tên — khi bạn làm tất cả đúng, đủ, hoàn hảo... mà vẫn cảm thấy mình đang <strong>thiếu một thứ gì đó rất căn bản</strong>.<br>8 chương thực hành này sẽ đưa bạn tìm lại thứ đó.</p>
-      <div class="hero-cta-wrap">
-        <button class="hero-btn" onclick="openModal()">✨ Bắt đầu hành trình — 99.000 ₫</button>
-        <span class="hero-price-note">Nhận ngay qua email · Thanh toán an toàn</span>
-      </div>
-      <div class="hero-trust">
-        <div class="trust-item"><span class="trust-dot"></span><span id="hero-buyers">399</span> người đã nhận</div>
-        <div class="trust-item"><span class="trust-dot"></span>★★★★★ 5.0 / 5</div>
-        <div class="trust-item"><span class="trust-dot"></span>Hoá đơn VAT điện tử</div>
-      </div>
-    </div>
-
-    <!-- BOOK COVER MOCKUP -->
-    <div class="book-scene">
-      <div class="book">
-        <div class="book-spine"></div>
-        <div class="book-front">
-          <div class="book-inner">
-            <div class="book-ornament">
-              <span></span><i>✦</i><span></span>
-            </div>
-            <div class="book-label">Cẩm Nang Tịnh Thức</div>
-            <div class="book-title">Đại<br>Nữ<br>Chủ</div>
-            <div class="book-rule"></div>
-            <div class="book-subtitle">Tỉnh thức để làm chủ<br>cuộc đời mình</div>
-            <div class="book-desc">8 chương thực hành<br>cho người phụ nữ<br>đang tìm lại chính mình</div>
-            <div class="book-brand">HanaDola · 2026</div>
-          </div>
-        </div>
-        <div class="book-pages"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ PROOF STRIP ══ -->
-<div class="strip">
-  <div class="strip-inner">
-    <div class="strip-item"><div class="strip-num" id="buyers-count">399</div><div class="strip-lbl">Người đã nhận</div></div>
-    <div class="strip-item"><div class="strip-num">8</div><div class="strip-lbl">Chương thực hành</div></div>
-    <div class="strip-item"><div class="strip-num">★ 5.0</div><div class="strip-lbl">Đánh giá trung bình</div></div>
-    <div class="strip-item"><div class="strip-num">99k</div><div class="strip-lbl">Chỉ một lần · Trọn đời</div></div>
+<!-- ══ FLOATING CTA ══ -->
+<div class="float-cta" id="floatCta">
+  <div class="float-cta-inner">
+    <span class="float-disc">199.000 ₫</span>
+    <span class="float-price">99k</span>
+    <button class="float-btn" onclick="openModal()">✦ Nhận ngay</button>
   </div>
 </div>
 
-<!-- ══ HOOK ══ -->
-<section class="hook">
-  <div class="hook-inner">
-    <p class="sec-label">Câu Chuyện Bắt Đầu Như Thế Này</p>
-    <h2 rv>Bạn không mắc kẹt vì bạn <em>không đủ tốt</em> —<br>bạn mắc kẹt vì bạn đang tốt... cho người khác</h2>
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div>
+      <p class="hero-eyebrow">Cẩm Nang Tịnh Thức · 8 Phần Hành Trình</p>
+      <h1 class="hero-h1">
+        Bạn đã làm hài lòng<br>
+        tất cả mọi người.<br>
+        <em>Trừ chính mình.</em>
+      </h1>
+      <p class="hero-sub">Bạn không mệt vì làm nhiều — bạn mệt vì chưa bao giờ được là mình. <strong>Đây là chiếc la bàn</strong> giúp bạn tìm lại hướng đi khi bạn đang đứng giữa cuộc đời mà không biết mình đang đi đâu.</p>
+      <div class="hero-cta">
+        <button class="hero-btn-main" onclick="openModal()">✦ Bắt đầu hành trình ngay</button>
+        <div class="hero-price-info">
+          <div class="hero-price-old">199.000 ₫</div>
+          <div class="hero-price-new">99k</div>
+        </div>
+      </div>
+      <div class="hero-trust">
+        <span class="ht-item"><span id="hero-buyers">399</span> người đã nhận</span>
+        <span class="ht-item">★★★★★ 5.0</span>
+        <span class="ht-item">Hóa đơn VAT</span>
+        <span class="ht-item">Nhận ngay qua email</span>
+      </div>
+    </div>
 
-    <p class="hook-p rv">Cô ấy 34 tuổi. Công việc ổn định. Mối quan hệ không đến mức tệ. Nhìn từ ngoài vào — cô ấy ổn. Nhưng có một đêm, lúc 2 giờ sáng, cô ấy nhận ra mình đã không nhớ nổi lần cuối mình thức dậy mà không thấy lo lắng là khi nào.</p>
-    <p class="hook-p rv">Không lo về điều gì cụ thể. Chỉ là cái cảm giác mơ hồ rằng mình đang sống thiếu một thứ gì đó rất căn bản — như thể tất cả mọi thứ đang đúng trên bề mặt, mà bên trong thì không ai ở nhà.</p>
-    <p class="hook-p rv">Cô ấy luôn nói "có" khi muốn nói "không" — vì sợ bị ghét. Cô ấy gánh tất cả — vì nghĩ đó là điều người phụ nữ phải làm. Cô ấy đặt kỳ vọng vào người khác — và thất vọng theo cách lặp đi lặp lại đến mức tê liệt. Cô ấy chờ ai đó nhắn tin để biết mình có ổn không.</p>
-    <div class="hook-quote rv"><p>"Tôi không biết tôi muốn gì. Tôi chỉ biết rằng thứ tôi đang sống — không phải của tôi."</p></div>
-    <p class="hook-p rv">Nếu bạn vừa đọc câu đó và tim bạn khẽ co lại — thì bạn đang đúng chỗ. Bởi vì đây là hành trình viết cho bạn.</p>
+    <!-- BOOK -->
+    <div class="book-wrap">
+      <div class="book">
+        <div class="bk-spine"></div>
+        <div class="bk-front">
+          <div class="bk-gold-border"></div>
+          <div class="bk-inner">
+            <div class="bk-top-orn"><span></span><i>✦</i><span></span></div>
+            <div class="bk-eyebrow">Cẩm Nang Tịnh Thức</div>
+            <div class="bk-title">Đại<br>Nữ<br>Chủ</div>
+            <div class="bk-rule"></div>
+            <div class="bk-sub">Tỉnh thức để làm chủ<br>cuộc đời mình</div>
+            <div class="bk-divider"><span></span><i>✦</i><span></span></div>
+            <div class="bk-desc">8 phần thực hành<br>dành cho người phụ nữ<br>đang tìm lại chính mình</div>
+            <div class="bk-brand">HanaDola · 2026</div>
+          </div>
+        </div>
+        <div class="bk-pages"></div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ══ PAIN CARDS ══ -->
+<!-- ══ PAIN ══ -->
 <section class="pain">
   <div class="pain-inner">
-    <div class="section-head rv">
-      <p class="sec-label">Bạn Có Nhận Ra Mình Ở Đây?</p>
-      <h2>Những dấu hiệu của người đang <em>sống mà chưa thật sự sống</em></h2>
-      <p>Không phải ai cũng nhận ra họ đang ở trong đây. Nhưng nếu bạn đọc và gật đầu với bất kỳ điều nào —</p>
-    </div>
+    <h2 class="pain-headline rv">Bạn có nhận ra<br><em>mình trong đây không?</em></h2>
     <div class="pain-grid">
-      <div class="pain-card rv">
-        <div class="pain-icon">😶‍🌫️</div>
-        <div class="pain-title">Mệt mà không biết mệt vì cái gì</div>
-        <div class="pain-body">Bạn ngủ đủ giấc, ăn đủ bữa, làm đủ việc — nhưng mỗi sáng thức dậy vẫn thấy một khoảng trống mà không đặt tên được.</div>
+      <div class="pain-item rv">
+        <div class="pain-num">01</div>
+        <div class="pain-txt">Mệt — mà không biết<br><em>vì sao.</em></div>
+        <div class="pain-sub">Bạn ngủ đủ giấc, làm đủ việc, mà sáng ra vẫn thấy như chưa ngủ được gì. Cơ thể ổn. Nhưng bên trong thì không.</div>
       </div>
-      <div class="pain-card rv" data-d=".08">
-        <div class="pain-icon">📱</div>
-        <div class="pain-title">Hạnh phúc sống trong điện thoại người khác</div>
-        <div class="pain-body">Bạn gửi tin nhắn lúc 10 giờ sáng. Đến 3 giờ chiều chưa có hồi âm và bạn đã tự xây xong một kịch bản chia tay.</div>
+      <div class="pain-item rv" data-d=".1">
+        <div class="pain-num">02</div>
+        <div class="pain-txt">Có tất cả — mà vẫn<br><em>cảm thấy thiếu.</em></div>
+        <div class="pain-sub">Không thiếu tiền. Không thiếu người. Chỉ thiếu một thứ không có tên — mà cứ nặng trên ngực mỗi khi trời tối.</div>
       </div>
-      <div class="pain-card rv" data-d=".16">
-        <div class="pain-icon">🤐</div>
-        <div class="pain-title">Nói "có" khi tim đang hét "không"</div>
-        <div class="pain-body">Bạn nhận thêm việc. Bạn ở lại muộn thay người khác. Bạn giải thích dài dòng chỉ để từ chối — và rồi vẫn đồng ý.</div>
+      <div class="pain-item rv" data-d=".05">
+        <div class="pain-num">03</div>
+        <div class="pain-txt">Sống cho tất cả —<br><em>chưa bao giờ cho mình.</em></div>
+        <div class="pain-sub">Bạn lo cho con, cho chồng, cho bố mẹ, cho đồng nghiệp. Khi nào đến lượt bạn — bạn cũng không biết bắt đầu từ đâu nữa.</div>
       </div>
-      <div class="pain-card rv" data-d=".04">
-        <div class="pain-icon">🪨</div>
-        <div class="pain-title">Gánh những thứ không ai nhờ bạn gánh</div>
-        <div class="pain-body">Bạn lo cho mọi người, giải quyết mọi thứ, giữ mọi mối quan hệ. Đến khi kiệt sức — không ai nhận ra, vì bạn chưa bao giờ nói.</div>
-      </div>
-      <div class="pain-card rv" data-d=".12">
-        <div class="pain-icon">🔁</div>
-        <div class="pain-title">Oán trách cũ vẫn chưa chịu buông</div>
-        <div class="pain-body">Có người đang "thuê miễn phí" không gian trong đầu bạn — bằng những ký ức bạn cứ mang đi khắp nơi dù chẳng ai nhờ.</div>
-      </div>
-      <div class="pain-card rv" data-d=".20">
-        <div class="pain-icon">⏸️</div>
-        <div class="pain-title">Trì hoãn vì sợ không đủ hoàn hảo</div>
-        <div class="pain-body">Bạn có ý tưởng, có kỹ năng, có đủ lý do để bắt đầu — nhưng giọng nói trong đầu vẫn hỏi: "Nếu làm sai thì sao?"</div>
+      <div class="pain-item rv" data-d=".15">
+        <div class="pain-num">04</div>
+        <div class="pain-txt">Biết cần thay đổi —<br><em>nhưng không biết làm gì.</em></div>
+        <div class="pain-sub">Bạn cảm thấy đang đứng ở một ngã tư mà không có biển chỉ đường. Muốn đi. Nhưng đi về đâu?</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══ BRIDGE ══ -->
-<section class="bridge">
-  <div class="bridge-inner rv">
-    <p class="sec-label">Và Rồi Có Một Ngày</p>
-    <h2>Không phải phép màu — mà là <em>sự thật</em> mà bạn chưa ai nói thẳng</h2>
-    <p>Đây không phải bộ quy tắc sống. Không phải bài giảng tâm lý học. Không phải danh sách những thứ bạn phải làm để trở thành người phụ nữ hoàn hảo hơn.</p>
-    <p>Đây là 8 chương hành trình — với những câu chuyện thật từ những người phụ nữ thật, những người đã từng mắc kẹt đúng chỗ bạn đang đứng — và tìm ra con đường bước ra.</p>
-    <div class="bridge-highlight">"Bạn không cần trở thành người khác. Bạn chỉ cần trở lại với phiên bản tự do nhất của chính mình."</div>
-    <p>Và phiên bản đó — vẫn đang ở đây, chờ bạn.</p>
+<!-- ══ COMPASS / HOOK ══ -->
+<section class="compass">
+  <div class="compass-inner">
+    <p class="sec-tag rv">Chiếc La Bàn Của Bạn</p>
+    <h2 class="rv">Bạn không cần thêm<br>lời khuyên.<br><em>Bạn cần hướng đi.</em></h2>
+    <p class="compass-p rv">Đây không phải sách dạy bạn cách sống. Đây là 8 phần hành trình giúp bạn <strong>nhìn thấy bạn đang ở đâu</strong> — và tự chọn con đường bạn muốn đi.</p>
+    <div class="compass-quote rv">
+      <p>"Có một thứ bạn nợ chính mình từ rất lâu. Đây là lúc bắt đầu trả."</p>
+    </div>
+    <p class="compass-p rv" style="font-size:15px;color:var(--text3)">Mỗi phần là một mảnh bạn đang tìm lại — từ nghệ thuật buông bỏ, đến tự do tài chính, đến cách nói không mà không cần giải thích. Đọc theo thứ tự hoặc bắt đầu từ phần nào chạm vào bạn nhất.</p>
   </div>
 </section>
 
-<!-- ══ 8 CHAPTERS ══ -->
-<section class="chapters">
-  <div class="chapters-inner">
-    <div class="section-head rv">
-      <p class="sec-label">Nội Dung 8 Chương</p>
-      <h2>Mỗi chương là một mảnh <em>bạn đang tìm lại</em></h2>
-      <p>Không cần đọc theo thứ tự. Bắt đầu từ chương nào chạm vào bạn nhất.</p>
+<!-- ══ 8 PARTS ══ -->
+<section class="parts">
+  <div class="parts-inner">
+    <div class="parts-head rv">
+      <p class="sec-tag" style="justify-content:flex-start;margin-bottom:12px">8 Phần Thực Hành</p>
+      <h2>Mỗi phần, một thứ<br><em>bạn đang tìm lại.</em></h2>
     </div>
-    <div class="chapters-grid">
-      <div class="ch-card rv">
-        <div class="ch-num">01</div>
-        <div class="ch-body">
-          <div class="ch-tag">Chương Một</div>
-          <div class="ch-title">Nghệ Thuật Mặc Kệ<br><em>Khi Im Lặng Trở Thành Sức Mạnh</em></div>
-          <div class="ch-desc">Điều khiến một người phụ nữ không thể bị đánh bại không phải là nhan sắc hay tiền bạc — mà là khoảnh khắc cô ấy đột nhiên mặc kệ tất cả. Học cách dừng tiêu tốn năng lượng vào thứ không thuộc về mình.</div>
+    <div class="parts-grid">
+      <div class="part-card rv">
+        <div class="part-n">01</div>
+        <div class="part-content">
+          <div class="part-label">Phần Một</div>
+          <div class="part-title">Nghệ Thuật Mặc Kệ</div>
+          <div class="part-desc">Khi nào bạn ngừng sống trong đầu người khác — và bắt đầu tập trung vào thứ thực sự thuộc về mình.</div>
         </div>
       </div>
-      <div class="ch-card rv" data-d=".1">
-        <div class="ch-num">02</div>
-        <div class="ch-body">
-          <div class="ch-tag">Chương Hai</div>
-          <div class="ch-title">Mưu Sinh Trước Mưu Ái<br><em>Tự Do Là Nền Tảng Của Tình Yêu</em></div>
-          <div class="ch-desc">Khi bạn có nền tảng tài chính vững chắc, bạn yêu từ vị thế của sự lựa chọn — không phải từ vị thế của sự cần thiết. Câu chuyện về người phụ nữ thoát khỏi cuộc hôn nhân không hạnh phúc nhờ 40 triệu tiết kiệm bí mật.</div>
+      <div class="part-card rv" data-d=".1">
+        <div class="part-n">02</div>
+        <div class="part-content">
+          <div class="part-label">Phần Hai</div>
+          <div class="part-title">Mưu Sinh Trước Mưu Ái</div>
+          <div class="part-desc">Tự do tài chính không phải ích kỷ — đó là bảo vệ phẩm giá. Yêu từ vị thế lựa chọn, không phải vị thế cần thiết.</div>
         </div>
       </div>
-      <div class="ch-card rv" data-d=".05">
-        <div class="ch-num">03</div>
-        <div class="ch-body">
-          <div class="ch-tag">Chương Ba</div>
-          <div class="ch-title">Nghệ Thuật Từ Chối<br><em>Ranh Giới Tạo Nên Giá Trị</em></div>
-          <div class="ch-desc">Người không bao giờ từ chối không được tôn trọng — họ bị lợi dụng. "Có" của bạn chỉ có giá trị khi người ta biết bạn cũng có thể nói "không". Xây dựng ranh giới không phải là lạnh lùng — đó là ngôn ngữ của sự tự trọng.</div>
+      <div class="part-card rv" data-d=".05">
+        <div class="part-n">03</div>
+        <div class="part-content">
+          <div class="part-label">Phần Ba</div>
+          <div class="part-title">Nghệ Thuật Từ Chối</div>
+          <div class="part-desc">Nói không — bình tĩnh, rõ ràng, không cần giải thích. Ranh giới không làm bạn xấu đi, nó làm bạn đáng giá hơn.</div>
         </div>
       </div>
-      <div class="ch-card rv" data-d=".15">
-        <div class="ch-num">04</div>
-        <div class="ch-body">
-          <div class="ch-tag">Chương Bốn</div>
-          <div class="ch-title">Kỳ Vọng Đúng Chỗ<br><em>Hạ Xuống Để Nâng Lên</em></div>
-          <div class="ch-desc">Hầu hết những tổn thương không đến từ ác tâm của người khác — chúng đến từ khoảng cách giữa kỳ vọng và thực tế. Hạ kỳ vọng vào người khác. Nâng kỳ vọng vào bản thân. Đây là bí mật của người thực sự bình an.</div>
+      <div class="part-card rv" data-d=".15">
+        <div class="part-n">04</div>
+        <div class="part-content">
+          <div class="part-label">Phần Bốn</div>
+          <div class="part-title">Kỳ Vọng Đúng Chỗ</div>
+          <div class="part-desc">Ngừng chờ người khác để hạnh phúc. Khi hạnh phúc không còn sống trong điện thoại của ai đó — bạn mới thực sự tự do.</div>
         </div>
       </div>
-      <div class="ch-card rv" data-d=".08">
-        <div class="ch-num">05</div>
-        <div class="ch-body">
-          <div class="ch-tag">Chương Năm</div>
-          <div class="ch-title">Bình Lặng Như Mặt Hổ<br><em>Khí Chất Không Oán Khí</em></div>
-          <div class="ch-desc">Không phải kẻ nổi giận nhất là đáng sợ nhất. Người bình tĩnh nhất trong căn phòng — người mà sự hiện diện tự nói lên tất cả — mới là người thực sự lợi hại. Buông oán khí không phải vì họ xứng đáng — mà vì bạn xứng đáng.</div>
+      <div class="part-card rv" data-d=".08">
+        <div class="part-n">05</div>
+        <div class="part-content">
+          <div class="part-label">Phần Năm</div>
+          <div class="part-title">Bình Lặng Như Mặt Hổ</div>
+          <div class="part-desc">Buông oán khí — không phải vì họ xứng đáng, mà vì bạn xứng đáng lấy lại mảnh đất trong đầu mình.</div>
         </div>
       </div>
-      <div class="ch-card rv" data-d=".18">
-        <div class="ch-num">06</div>
-        <div class="ch-body">
-          <div class="ch-tag">Chương Sáu</div>
-          <div class="ch-title">Hành Động Thay Nội Hao<br><em>Hoàn Thành Hơn Hoàn Hảo</em></div>
-          <div class="ch-desc">Bạn kiệt sức mà không tiến được một bước — đó là nội hao. Câu chuyện của người phụ nữ trì hoãn blog 3 năm, rồi đăng bài không đọc lại — và 6 tháng sau có hợp đồng viết lách đầu tiên.</div>
+      <div class="part-card rv" data-d=".18">
+        <div class="part-n">06</div>
+        <div class="part-content">
+          <div class="part-label">Phần Sáu</div>
+          <div class="part-title">Hành Động Thay Nội Hao</div>
+          <div class="part-desc">Bắt đầu — không cần hoàn hảo. Thứ duy nhất không thể cải thiện là thứ chưa bao giờ được bắt đầu.</div>
         </div>
       </div>
-      <div class="ch-card rv" data-d=".04">
-        <div class="ch-num">07</div>
-        <div class="ch-body">
-          <div class="ch-tag">Chương Bảy</div>
-          <div class="ch-title">Đại Nữ Chủ<br><em>Buông Để Làm Chủ</em></div>
-          <div class="ch-desc">Làm đại nữ chủ không phải là gánh vác thêm — đó là dũng cảm để buông xuống những gánh nặng không ai nhờ bạn gánh. Câu chuyện của người phụ nữ phải nằm viện lúc 40 tuổi mới nhận ra mình chưa từng sống cho chính mình.</div>
+      <div class="part-card rv" data-d=".04">
+        <div class="part-n">07</div>
+        <div class="part-content">
+          <div class="part-label">Phần Bảy</div>
+          <div class="part-title">Đại Nữ Chủ</div>
+          <div class="part-desc">Buông xuống những gánh không ai nhờ bạn gánh. Làm chủ không phải gánh thêm — mà là dũng cảm đặt mình xuống trước.</div>
         </div>
       </div>
-      <div class="ch-card rv" data-d=".14">
-        <div class="ch-num">08</div>
-        <div class="ch-body">
-          <div class="ch-tag">Chương Tám</div>
-          <div class="ch-title">Tịnh Thức<br><em>Chấm Dứt Nội Chiến Trong Tâm Trí</em></div>
-          <div class="ch-desc">Thu hồi năng lượng khỏi lo âu về tương lai, oán trách về quá khứ, kỳ vọng sai lầm về hiện tại — và bạn sẽ ngạc nhiên vì mình có bao nhiêu sức sống để thực sự sống. Không cần thêm caffeine. Chỉ cần ngừng rò rỉ.</div>
+      <div class="part-card rv" data-d=".14">
+        <div class="part-n">08</div>
+        <div class="part-content">
+          <div class="part-label">Phần Tám</div>
+          <div class="part-title">Tịnh Thức</div>
+          <div class="part-desc">Thu hồi năng lượng đang rò rỉ mỗi ngày vào lo âu, oán trách, kỳ vọng sai. Không cần thêm gì — chỉ cần ngừng rò rỉ.</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══ QUOTES ══ -->
-<section class="quotes">
-  <div class="quotes-inner">
-    <div class="section-head rv">
-      <p class="sec-label">Những Dòng Sẽ Ở Lại Với Bạn</p>
-      <h2>Không phải câu trích dẫn — <em>đây là sự thật</em></h2>
-    </div>
-    <div class="quotes-grid">
-      <div class="quote-card rv">
-        <div class="quote-mark">"</div>
-        <p class="quote-text">Khi bạn không còn sợ bị ghét — đó là lúc bạn bắt đầu nắm quyền kiểm soát cuộc đời mình.</p>
-        <div class="quote-src">Chương 01 · Nghệ Thuật Mặc Kệ</div>
+<!-- ══ FEATURED QUOTES ══ -->
+<section class="fquotes">
+  <div class="fq-inner">
+    <p class="sec-tag rv">Những Dòng Sẽ Ở Lại</p>
+    <div class="fq-grid">
+      <div class="fq rv">
+        <div class="fq-text">"Bạn không cần trở thành người khác.<br>Bạn chỉ cần <em>trở lại với chính mình.</em>"</div>
+        <div class="fq-from">Phần 01 · Nghệ Thuật Mặc Kệ</div>
       </div>
-      <div class="quote-card rv">
-        <div class="quote-mark">"</div>
-        <p class="quote-text">Tiền không mua được hạnh phúc. Nhưng nó mua được quyền được chọn — và đó là điều quý hơn hạnh phúc ngắn hạn.</p>
-        <div class="quote-src">Chương 02 · Mưu Sinh Trước Mưu Ái</div>
+      <div class="fq rv">
+        <div class="fq-text">"Khi bạn không còn sợ bị ghét —<br>đó là lúc bạn bắt đầu <em>thực sự sống.</em>"</div>
+        <div class="fq-from">Phần 03 · Nghệ Thuật Từ Chối</div>
       </div>
-      <div class="quote-card rv">
-        <div class="quote-mark">"</div>
-        <p class="quote-text">Tha thứ không phải là quà tặng bạn dành cho người đã làm bạn đau. Đó là quà bạn tặng cho chính mình — để lấy lại mảnh đất trong đầu.</p>
-        <div class="quote-src">Chương 05 · Bình Lặng Như Mặt Hổ</div>
-      </div>
-      <div class="quote-card rv">
-        <div class="quote-mark">"</div>
-        <p class="quote-text">Bạn không thể đổ từ chiếc cốc rỗng. Tự chăm sóc bản thân không phải ích kỷ — đó là điều kiện tiên quyết để chăm sóc người khác.</p>
-        <div class="quote-src">Chương 07 · Đại Nữ Chủ</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ WHO ══ -->
-<section class="who">
-  <div class="who-inner">
-    <div class="rv">
-      <p class="sec-label">Dành Cho Bạn</p>
-      <h2 style="font-family:var(--serif);font-size:clamp(26px,3.5vw,38px);font-weight:700;line-height:1.2;margin-top:12px">Hành trình này<br>viết cho <em style="font-style:italic;color:var(--rose)">người như bạn</em></h2>
-      <ul class="who-list">
-        <li>Bạn đang cảm thấy kiệt sức mà không biết vì sao</li>
-        <li>Bạn muốn nói "không" nhưng không biết làm thế nào</li>
-        <li>Bạn đang ở trong mối quan hệ khiến bạn nhỏ hơn chính mình</li>
-        <li>Bạn mang theo oán trách từ quá khứ và chưa biết cách buông</li>
-        <li>Bạn muốn bắt đầu điều gì đó nhưng sợ không đủ hoàn hảo</li>
-        <li>Bạn chưa bao giờ thực sự đặt bản thân làm ưu tiên</li>
-      </ul>
-    </div>
-    <div class="rv">
-      <div class="who-not">
-        <p style="font-size:13px;font-weight:600;color:var(--blush);margin-bottom:8px">Không dành cho bạn nếu —</p>
-        <p>Bạn đang tìm công thức thành công nhanh, bí quyết thu hút người yêu, hay cách thao túng tâm lý người khác. Đây là hành trình hướng vào bên trong — không hướng ra ngoài.</p>
-      </div>
-      <div style="margin-top:24px;padding:24px;background:rgba(212,40,112,.06);border:1px solid var(--border);border-radius:12px">
-        <p style="font-family:var(--serif);font-size:18px;font-style:italic;color:var(--text2);line-height:1.65">Đây không phải hành trình của sự hoàn hảo. Đây là hành trình của sự <strong style="color:var(--text)">thật</strong>.</p>
+      <div class="fq rv">
+        <div class="fq-text">"Tha thứ không phải quà cho người đã làm bạn đau.<br>Đó là <em>quà bạn tặng cho chính mình.</em>"</div>
+        <div class="fq-from">Phần 05 · Bình Lặng Như Mặt Hổ</div>
       </div>
     </div>
   </div>
@@ -669,55 +587,27 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:999;
 <!-- ══ TESTIMONIALS ══ -->
 <section class="testi">
   <div class="testi-inner">
-    <div class="section-head rv">
-      <p class="sec-label">Người Đã Đọc Nói Gì</p>
-      <h2>Không phải lời khen — <em>đây là điều họ thay đổi</em></h2>
+    <div class="section-head" style="text-align:center;margin-bottom:0">
+      <p class="sec-tag rv">Người Đã Đi Qua Hành Trình Này</p>
     </div>
     <div class="testi-grid">
-      <div class="t-card rv">
-        <div class="t-stars">★★★★★</div>
-        <p class="t-text">"Tôi đã đọc rất nhiều thứ về tâm lý học và phát triển bản thân, nhưng Đại Nữ Chủ là thứ đầu tiên làm tôi dừng lại và khóc ở trang thứ ba. Câu chuyện của Linh trong chương Mặc Kệ — tôi tưởng người ta viết về tôi."</p>
-        <div class="t-name">Nguyễn Lan Anh</div>
-        <div class="t-role">32 tuổi · Marketing Manager</div>
+      <div class="tc rv">
+        <div class="tc-stars">★★★★★</div>
+        <p class="tc-text">"Tôi đọc đến phần Mặc Kệ và phải dừng lại vì không cầm được nước mắt. Đó là lần đầu tiên tôi thấy ai đó mô tả chính xác thứ tôi đang cảm thấy — mà tôi không có từ nào để diễn đạt."</p>
+        <div class="tc-name">Nguyễn Lan Anh</div>
+        <div class="tc-role">32 tuổi · TP.HCM</div>
       </div>
-      <div class="t-card rv" data-d=".1">
-        <div class="t-stars">★★★★★</div>
-        <p class="t-text">"Chương Mưu Sinh Trước Mưu Ái thay đổi hoàn toàn cách tôi nhìn về tiền bạc và tình yêu. Tôi đã mở tài khoản ngân hàng riêng ngay trong tuần đó. Nghe nhỏ nhưng với tôi — đó là tự do đầu tiên."</p>
-        <div class="t-name">Trần Bảo Ngọc</div>
-        <div class="t-role">27 tuổi · Freelance Designer</div>
+      <div class="tc rv" data-d=".12">
+        <div class="tc-stars">★★★★★</div>
+        <p class="tc-text">"Sau phần Mưu Sinh Trước Mưu Ái, tôi mở ngay một tài khoản ngân hàng riêng. Nghe nhỏ — nhưng với tôi đó là lần đầu tiên tôi làm gì đó chỉ cho mình, không phải cho ai khác."</p>
+        <div class="tc-name">Trần Bảo Ngọc</div>
+        <div class="tc-role">27 tuổi · Hà Nội</div>
       </div>
-      <div class="t-card rv" data-d=".2">
-        <div class="t-stars">★★★★★</div>
-        <p class="t-text">"Nếu bạn đang trong một mối quan hệ khiến bạn nhỏ hơn chính mình — hãy đọc chương Đại Nữ Chủ trước. Đó là thứ tôi ước mình được đọc 5 năm trước. Không phải để tránh sai lầm. Mà để biết mình xứng đáng với nhiều hơn thế."</p>
-        <div class="t-name">Phạm Thùy Dương</div>
-        <div class="t-role">38 tuổi · Chủ doanh nghiệp</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ WHAT YOU GET ══ -->
-<section class="gets">
-  <div class="gets-inner">
-    <div class="rv">
-      <p class="sec-label">Bạn Nhận Được</p>
-      <h2 style="font-family:var(--serif);font-size:clamp(26px,3.5vw,38px);font-weight:700;line-height:1.2;margin-top:12px">Toàn bộ hành trình<br><em style="font-style:italic;color:var(--rose)">trong một lần nhận</em></h2>
-      <ul class="gets-list">
-        <li><div class="gets-check">✓</div><span><strong>8 chương thực hành chuyên sâu</strong> — mỗi chương giải quyết một vấn đề cụ thể bạn đang đối mặt</span></li>
-        <li><div class="gets-check">✓</div><span><strong>Câu chuyện có thật</strong> từ những người phụ nữ thật — không phải lý thuyết xa xôi</span></li>
-        <li><div class="gets-check">✓</div><span><strong>Bài tập thực hành cụ thể</strong> trong mỗi chương — làm được ngay, không cần thiết bị gì</span></li>
-        <li><div class="gets-check">✓</div><span><strong>Insight và câu hỏi phản chiếu</strong> để khám phá sâu hơn về chính mình</span></li>
-        <li><div class="gets-check">✓</div><span><strong>Gửi về email ngay lập tức</strong> sau khi thanh toán thành công</span></li>
-        <li><div class="gets-check">✓</div><span><strong>Hóa đơn VAT điện tử</strong> hợp lệ từ Hanadola Media &amp; Technology</span></li>
-      </ul>
-    </div>
-    <div class="rv">
-      <div class="gets-price-box">
-        <div class="gets-price-old">Trị giá 299.000 ₫</div>
-        <div class="gets-price">99k</div>
-        <div class="gets-price-note">Thanh toán một lần · Sở hữu trọn đời<br>Nhận ngay qua email</div>
-        <button class="gets-btn" onclick="openModal()">✨ Nhận hành trình ngay</button>
-        <p style="font-size:11px;color:var(--text3);margin-top:12px">🔒 Thanh toán an toàn qua ACB · SePay<br>💜 <span id="price-buyers">399</span> người đã sở hữu</p>
+      <div class="tc rv" data-d=".24">
+        <div class="tc-stars">★★★★★</div>
+        <p class="tc-text">"Đây là thứ tôi ước mình được đọc 5 năm trước. Không phải để tránh sai lầm — mà để biết mình xứng đáng hơn những gì mình đang chấp nhận."</p>
+        <div class="tc-name">Phạm Thùy Dương</div>
+        <div class="tc-role">38 tuổi · Đà Nẵng</div>
       </div>
     </div>
   </div>
@@ -726,29 +616,29 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:999;
 <!-- ══ PRICING ══ -->
 <section class="pricing">
   <div class="pricing-inner">
-    <div class="section-head rv">
-      <p class="sec-label">Bắt Đầu Hôm Nay</p>
-      <h2>Hành trình của bạn<br><em>bắt đầu từ đây</em></h2>
-      <p class="pricing-sub">Ưu đãi ra mắt — có hiệu lực trong</p>
-    </div>
-    <div class="countdown-wrap rv">
-      <span class="cd-lbl">⏰ Còn lại:</span>
-      <div class="cd-block" id="h1">00</div><span class="cd-sep">:</span>
-      <div class="cd-block" id="m1">00</div><span class="cd-sep">:</span>
-      <div class="cd-block" id="s1">00</div>
+    <p class="sec-tag rv">Bắt Đầu Hành Trình</p>
+    <h2 class="rv">Ưu đãi ra mắt —<br><em>hết hôm nay</em></h2>
+    <p class="pricing-sub rv">Còn lại trước khi giá về 199k</p>
+    <div class="p-cd rv">
+      <span class="p-cd-lbl">⏰</span>
+      <div><div class="p-cd-block" id="h1">00</div><span class="p-cd-unit">giờ</span></div>
+      <span class="p-cd-sep">:</span>
+      <div><div class="p-cd-block" id="m1">00</div><span class="p-cd-unit">phút</span></div>
+      <span class="p-cd-sep">:</span>
+      <div><div class="p-cd-block" id="s1">00</div><span class="p-cd-unit">giây</span></div>
     </div>
     <div class="pricing-box rv">
-      <div class="p-old">Giá gốc: 299.000 ₫</div>
+      <div class="p-was">Giá gốc: 199.000 ₫</div>
       <div class="p-price">99k</div>
-      <div class="p-unit">/ Trọn bộ 8 chương · Sở hữu vĩnh viễn</div>
-      <ul class="p-includes">
-        <li>8 chương thực hành với câu chuyện thật và bài tập cụ thể</li>
-        <li>Giao hàng ngay qua email sau khi thanh toán</li>
-        <li>Hóa đơn VAT điện tử hợp lệ</li>
-        <li>Hỗ trợ qua email và hotline nếu cần</li>
+      <div class="p-unit">Trọn 8 phần · Sở hữu vĩnh viễn · Nhận ngay qua email</div>
+      <ul class="p-list">
+        <li>8 phần thực hành với câu chuyện thật và bài tập cụ thể</li>
+        <li>Nhận về email trong 1–3 phút sau thanh toán</li>
+        <li>Hóa đơn VAT điện tử hợp lệ từ Hanadola</li>
+        <li>Hỗ trợ qua email và hotline khi cần</li>
       </ul>
-      <button class="p-btn" onclick="openModal()">✨ Nhận ngay — Chỉ 99.000 ₫</button>
-      <p class="p-micro">🔒 Thanh toán an toàn · ACB Banking · SePay<br>📧 Nhận qua email trong 1–3 phút sau thanh toán<br>💜 Đã có <span id="h2" style="color:var(--blush)"></span> giờ <span id="m2"></span> phút <span id="s2"></span> giây để nhận giá này</p>
+      <button class="p-btn" onclick="openModal()">✦ Nhận cẩm nang ngay — 99.000 ₫</button>
+      <p class="p-micro">🔒 Thanh toán an toàn · ACB Banking · SePay<br>💛 <span id="price-buyers">399</span> người đã bắt đầu hành trình này</p>
     </div>
   </div>
 </section>
@@ -756,18 +646,13 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:999;
 <!-- ══ FAQ ══ -->
 <section class="faq">
   <div class="faq-inner">
-    <div class="section-head rv">
-      <p class="sec-label">Câu Hỏi Thường Gặp</p>
-      <h2>Bạn đang <em>thắc mắc điều gì?</em></h2>
-    </div>
+    <p class="sec-tag rv">Câu Hỏi Thường Gặp</p>
     <div class="faq-list">
-      <div class="faq-item rv"><div class="faq-q" onclick="toggleFaq(this)">Tôi nhận tài liệu như thế nào sau khi thanh toán?<span class="faq-arrow">+</span></div><div class="faq-a">Sau khi chuyển khoản thành công, hệ thống tự động xác nhận trong 1–3 phút. Link tải và hóa đơn VAT sẽ được gửi ngay về địa chỉ email bạn đã đăng ký. Vui lòng kiểm tra cả hộp thư Spam/Promotions nếu không thấy trong Inbox.</div></div>
-      <div class="faq-item rv"><div class="faq-q" onclick="toggleFaq(this)">Tại sao không dùng từ "sách" hay "ebook"?<span class="faq-arrow">+</span></div><div class="faq-a">Đây là cẩm nang thực hành số — bộ nội dung thực hành được biên soạn và phân phối dưới dạng tài liệu kỹ thuật số. Khác với sách xuất bản truyền thống về hình thức phân phối, nhưng đầy đủ nội dung và chất lượng như một ấn phẩm chuyên nghiệp.</div></div>
-      <div class="faq-item rv"><div class="faq-q" onclick="toggleFaq(this)">Tôi có thể đọc trên điện thoại không?<span class="faq-arrow">+</span></div><div class="faq-a">Hoàn toàn được. Tài liệu là file HTML tương thích tất cả thiết bị. Khuyến nghị tải về máy và mở bằng trình duyệt Chrome/Safari để có trải nghiệm tốt nhất — mở trực tiếp từ email đôi khi có thể bị giới hạn tính năng.</div></div>
-      <div class="faq-item rv"><div class="faq-q" onclick="toggleFaq(this)">Nếu không nhận được email thì làm sao?<span class="faq-arrow">+</span></div><div class="faq-a">Liên hệ ngay với chúng tôi qua email admin@hanadola.com hoặc hotline 0935.251.866, cung cấp họ tên và địa chỉ email bạn đã đăng ký. Chúng tôi sẽ hỗ trợ trong vòng 30 phút trong giờ hành chính.</div></div>
-      <div class="faq-item rv"><div class="faq-q" onclick="toggleFaq(this)">Có được hoàn tiền không?<span class="faq-arrow">+</span></div><div class="faq-a">Do đây là tài liệu kỹ thuật số, sau khi giao hàng chúng tôi không hỗ trợ hoàn tiền. Tuy nhiên nếu bạn có vấn đề về kỹ thuật (không nhận được file, file lỗi...) chúng tôi sẽ hỗ trợ hoàn toàn miễn phí.</div></div>
-      <div class="faq-item rv"><div class="faq-q" onclick="toggleFaq(this)">Tôi có nhận được hóa đơn không?<span class="faq-arrow">+</span></div><div class="faq-a">Có. Hóa đơn VAT điện tử hợp lệ từ Công ty TNHH Hanadola Media &amp; Technology (MST: 0319352856) sẽ được gửi tự động về email của bạn sau khi thanh toán thành công.</div></div>
-      <div class="faq-item rv"><div class="faq-q" onclick="toggleFaq(this)">Nội dung có phù hợp với phụ nữ đã lập gia đình không?<span class="faq-arrow">+</span></div><div class="faq-a">Rất phù hợp. Đặc biệt chương 07 (Đại Nữ Chủ) và chương 04 (Kỳ Vọng Đúng Chỗ) được viết sâu về những vấn đề phụ nữ trong gia đình hay gặp — gánh nặng cảm xúc, kỳ vọng không được nói ra, và nghệ thuật buông để giữ bản thân.</div></div>
+      <div class="faq-item rv"><div class="faq-q" onclick="toggleFaq(this)">Tôi nhận tài liệu như thế nào?<i class="faq-icon">+</i></div><div class="faq-a">Sau khi chuyển khoản, hệ thống xác nhận tự động trong 1–3 phút. Link tải và hóa đơn VAT gửi ngay về email bạn đã đăng ký. Kiểm tra cả hộp Spam nếu không thấy trong Inbox.</div></div>
+      <div class="faq-item rv"><div class="faq-q" onclick="toggleFaq(this)">Đọc trên điện thoại được không?<i class="faq-icon">+</i></div><div class="faq-a">Được hoàn toàn. Tài liệu là file HTML tương thích mọi thiết bị. Nên tải về máy và mở bằng Chrome/Safari để có trải nghiệm tốt nhất.</div></div>
+      <div class="faq-item rv"><div class="faq-q" onclick="toggleFaq(this)">Không nhận được email thì liên hệ ai?<i class="faq-icon">+</i></div><div class="faq-a">Liên hệ admin@hanadola.com hoặc 0935.251.866. Chúng tôi hỗ trợ trong 30 phút giờ hành chính.</div></div>
+      <div class="faq-item rv"><div class="faq-q" onclick="toggleFaq(this)">Có hoàn tiền không?<i class="faq-icon">+</i></div><div class="faq-a">Do đây là tài liệu số, không hỗ trợ hoàn tiền sau khi giao hàng. Nếu có lỗi kỹ thuật, chúng tôi hỗ trợ hoàn toàn miễn phí.</div></div>
+      <div class="faq-item rv"><div class="faq-q" onclick="toggleFaq(this)">Phù hợp với phụ nữ đã có gia đình không?<i class="faq-icon">+</i></div><div class="faq-a">Rất phù hợp. Đặc biệt Phần 07 (Đại Nữ Chủ) và Phần 04 (Kỳ Vọng Đúng Chỗ) đi sâu vào những vấn đề phụ nữ trong gia đình hay gặp nhất.</div></div>
     </div>
   </div>
 </section>
@@ -785,14 +670,14 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:999;
       </div>
     </div>
     <div class="footer-links">
-      <a href="javascript:void(0)">Chính sách bảo mật</a>
-      <a href="javascript:void(0)">Điều khoản sử dụng</a>
-      <a href="javascript:void(0)">Chính sách hoàn tiền</a>
+      <a href="#">Chính sách bảo mật</a>
+      <a href="#">Điều khoản sử dụng</a>
+      <a href="#">Chính sách hoàn tiền</a>
       <a href="mailto:admin@hanadola.com">Liên hệ hỗ trợ</a>
     </div>
-    <div style="font-size:11px;color:var(--text3);line-height:2">
+    <div style="font-size:12px;color:var(--text3);line-height:2.2">
       © 2026 Hanadola Media &amp; Technology<br>
-      Bảo lưu mọi quyền. Nội dung được cấp phép<br>cá nhân — không chia sẻ hay phân phối lại.
+      Nội dung được cấp phép cá nhân<br>Không chia sẻ hoặc phân phối lại.
     </div>
   </div>
 </footer>
@@ -805,10 +690,8 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:999;
       <button class="modal-close" onclick="closeModal()">✕</button>
     </div>
     <div class="modal-body">
-
-      <!-- STEP 1: Form -->
       <div id="step1">
-        <p style="font-size:13px;color:var(--text3);margin-bottom:20px;line-height:1.65">Điền thông tin để nhận tài liệu qua email ngay sau khi thanh toán.</p>
+        <p style="font-size:13px;color:var(--text3);margin-bottom:18px;line-height:1.65">Điền thông tin để nhận tài liệu qua email ngay sau khi thanh toán.</p>
         <label class="m-label">Họ và tên *</label>
         <input class="m-input" id="inp-name" type="text" placeholder="Tên của bạn" autocomplete="name">
         <label class="m-label">Email *</label>
@@ -816,55 +699,44 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:999;
         <label class="m-label">Số điện thoại (không bắt buộc)</label>
         <input class="m-input" id="inp-phone" type="tel" placeholder="0901 234 567" autocomplete="tel">
         <button class="m-btn" id="btn-order" onclick="createOrder()">Tiếp theo — Thanh toán ↓</button>
-        <p class="m-micro">🔒 Thông tin của bạn được bảo mật hoàn toàn<br>Không spam · Chỉ dùng để gửi tài liệu</p>
+        <p class="m-micro">🔒 Thông tin bảo mật hoàn toàn · Không spam</p>
       </div>
-
-      <!-- STEP 2: QR Payment -->
       <div id="step2" style="display:none">
         <div class="qr-wrap">
           <img id="qr-img" src="" alt="QR thanh toán"
             onload="this.style.opacity='1';document.getElementById('qr-fallback').style.display='none'"
             onerror="this.style.opacity='.15';document.getElementById('qr-fallback').style.display='block'">
-          <div id="qr-fallback" style="display:none;font-size:12px;color:var(--blush);text-align:center;padding:12px 0;line-height:1.7">
-            ⚠️ Không tải được mã QR<br>
-            <span style="color:var(--text3)">Vui lòng chuyển khoản theo thông tin bên dưới</span>
-          </div>
+          <div id="qr-fallback" style="display:none;font-size:12px;color:var(--gold2);text-align:center;padding:12px 0;line-height:1.7">⚠️ Không tải được QR — chuyển khoản theo thông tin bên dưới</div>
         </div>
         <div class="bank-info">
           <div class="bi-row"><span class="bi-lbl">Ngân hàng</span><span class="bi-val">ACB</span></div>
           <div class="bi-row"><span class="bi-lbl">Số tài khoản</span><span class="bi-val" id="bi-account">—</span></div>
           <div class="bi-row"><span class="bi-lbl">Chủ tài khoản</span><span class="bi-val">HANADOLA MEDIA AND TECHNOLOGY</span></div>
-          <div class="bi-row"><span class="bi-lbl">Số tiền</span><span class="bi-val" style="color:var(--gold);font-size:18px;font-weight:800">99.000 ₫</span></div>
+          <div class="bi-row"><span class="bi-lbl">Số tiền</span><span class="bi-val" style="color:var(--gold2);font-size:18px;font-weight:800">99.000 ₫</span></div>
           <div class="bi-row"><span class="bi-lbl">Nội dung CK</span><span class="bi-val highlight" id="bi-desc">—</span></div>
         </div>
-        <div class="status-bar" id="status-bar">
-          <div class="spinner"></div>
-          <span>⏳ Đang chờ xác nhận thanh toán...</span>
-        </div>
-        <p class="poll-note">Hệ thống tự động xác nhận trong 1–3 phút sau khi bạn chuyển khoản<br>⚠️ Nhập <strong>đúng nội dung CK</strong> để hệ thống nhận diện tự động</p>
+        <div class="status-bar"><div class="spinner"></div><span>⏳ Đang chờ xác nhận thanh toán...</span></div>
+        <p class="poll-note">Hệ thống tự động xác nhận trong 1–3 phút sau chuyển khoản<br>⚠️ Nhập <strong>đúng nội dung CK</strong> để hệ thống nhận diện tự động</p>
       </div>
-
-      <!-- STEP 3: Success -->
       <div id="step3" style="display:none">
         <div class="s3-wrap">
-          <span class="s3-icon">🎉</span>
-          <div class="s3-title">Thanh toán thành công!</div>
-          <div class="s3-sub" id="s3-sub">Cảm ơn bạn! Hành trình của bạn đã bắt đầu rồi. 💜</div>
-          <a href="#" id="s3-btn" class="s3-btn">💜 Nhận Cẩm Nang Ngay</a>
+          <span class="s3-icon">✦</span>
+          <div class="s3-title">Hành trình bắt đầu rồi!</div>
+          <div class="s3-sub" id="s3-sub">Thanh toán thành công. Tài liệu đã gửi về email của bạn.</div>
+          <a href="#" id="s3-btn" class="s3-btn">✦ Nhận Cẩm Nang Ngay</a>
           <div class="s3-warn">
             <div class="s3-warn-title">⚠️ Lưu ý quan trọng</div>
-            <div class="s3-warn-body">📥 <strong>Tải tài liệu về thiết bị rồi mới mở lên trải nghiệm</strong> — mở trực tiếp trên trình duyệt có thể không hoạt động đúng nhé!</div>
+            <div class="s3-warn-body">📥 <strong>Tải tài liệu về thiết bị rồi mới mở</strong> — mở trực tiếp trên trình duyệt có thể không hoạt động đúng nhé!</div>
           </div>
-          <div class="s3-note">📧 Link cũng đã gửi về email · 🧾 Hóa đơn VAT kèm theo<br>Cần hỗ trợ: admin@hanadola.com · 0935.251.866</div>
+          <div class="s3-note">📧 Link gửi về email · 🧾 Hóa đơn VAT kèm theo<br>Hỗ trợ: admin@hanadola.com · 0935.251.866</div>
         </div>
       </div>
-
     </div>
   </div>
 </div>
 
 <script>
-/* ══ COUNTDOWN ══ */
+/* ══ COUNTDOWN (72h) ══ */
 (function(){
   const KEY='dainuthu_cd';
   let end=localStorage.getItem(KEY);
@@ -875,14 +747,14 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:999;
     const d=Math.max(0,end-Date.now());
     const h=Math.floor(d/3600000),m=Math.floor(d%3600000/60000),s=Math.floor(d%60000/1000);
     const hs=pad(h),ms=pad(m),ss=pad(s);
-    ['h1','h2'].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent=hs});
-    ['m1','m2'].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent=ms});
-    ['s1','s2'].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent=ss});
+    ['h1','pb-h'].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent=hs});
+    ['m1','pb-m'].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent=ms});
+    ['s1','pb-s'].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent=ss});
   }
   tick();setInterval(tick,1000);
 })();
 
-/* ══ BUYER COUNT (+1 mỗi 2 phút) ══ */
+/* ══ BUYER COUNT ══ */
 (function(){
   const KEY='fnt_buyer_count',KEY_TS='fnt_buyer_ts',BASE=399;
   let count=Math.max(parseInt(localStorage.getItem(KEY))||BASE,BASE);
@@ -890,7 +762,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:999;
   const passed=Math.floor((Date.now()-lastTs)/120000);
   if(passed>0){count+=passed;localStorage.setItem(KEY,count);localStorage.setItem(KEY_TS,Date.now())}
   function update(){
-    ['hdr-buyers','buyers-count','price-buyers','hero-buyers'].forEach(id=>{
+    ['hdr-buyers','hero-buyers','price-buyers'].forEach(id=>{
       const el=document.getElementById(id);if(el)el.textContent=count;
     });
   }
@@ -904,14 +776,21 @@ window.addEventListener('scroll',()=>{
   document.getElementById('pg').style.width=(dh>0?st/dh*100:0)+'%';
 },{passive:true});
 
+/* ══ FLOATING CTA ══ */
+window.addEventListener('scroll',()=>{
+  const fc=document.getElementById('floatCta');
+  if(window.scrollY>500)fc.classList.add('show');
+  else fc.classList.remove('show');
+},{passive:true});
+
 /* ══ SCROLL REVEAL ══ */
 const ro=new IntersectionObserver(es=>{
   es.forEach(e=>{if(e.isIntersecting){
     e.target.style.transitionDelay=(e.target.dataset.d||0)+'s';
     e.target.classList.add('in');ro.unobserve(e.target);
   }});
-},{threshold:.12});
-document.querySelectorAll('.rv').forEach((el,i)=>{el.dataset.d=el.dataset.d||(i%4*.07).toFixed(2);ro.observe(el)});
+},{threshold:.1});
+document.querySelectorAll('.rv').forEach((el,i)=>{el.dataset.d=el.dataset.d||(i%3*.06).toFixed(2);ro.observe(el)});
 
 /* ══ FAQ ══ */
 function toggleFaq(el){
@@ -926,8 +805,8 @@ function openModal(){
   document.getElementById('modal').classList.add('open');
   document.body.style.overflow='hidden';
   showStep(1);
-  document.getElementById('btn-order').disabled=false;
-  document.getElementById('btn-order').textContent='Tiếp theo — Thanh toán ↓';
+  const btn=document.getElementById('btn-order');
+  btn.disabled=false;btn.textContent='Tiếp theo — Thanh toán ↓';
 }
 function closeModal(){
   document.getElementById('modal').classList.remove('open');
@@ -936,20 +815,15 @@ function closeModal(){
 }
 function handleOverlayClick(e){if(e.target===document.getElementById('modal'))closeModal();}
 function showStep(n){
-  [1,2,3].forEach(i=>{
-    const el=document.getElementById('step'+i);
-    if(el)el.style.display=(i===n?'block':'none');
-  });
-  const titles={1:'Đặt hàng',2:'Quét mã thanh toán',3:'Đã xác nhận ✓'};
-  const t=document.getElementById('modalTitle');
-  if(t)t.textContent=titles[n]||'';
+  [1,2,3].forEach(i=>{const el=document.getElementById('step'+i);if(el)el.style.display=(i===n?'block':'none');});
+  const titles={1:'Đặt hàng',2:'Quét mã thanh toán',3:'Đã xác nhận ✦'};
+  const t=document.getElementById('modalTitle');if(t)t.textContent=titles[n]||'';
 }
-
 async function createOrder(){
   const name=document.getElementById('inp-name').value.trim();
   const email=document.getElementById('inp-email').value.trim();
   const phone=document.getElementById('inp-phone').value.trim();
-  if(!name){alert('Vui lòng nhập họ tên của bạn');return;}
+  if(!name){alert('Vui lòng nhập họ tên');return;}
   if(!email||!email.includes('@')){alert('Vui lòng nhập email hợp lệ');return;}
   const btn=document.getElementById('btn-order');
   btn.disabled=true;btn.textContent='Đang xử lý...';
@@ -960,35 +834,29 @@ async function createOrder(){
     currentOrderCode=d.orderCode;
     const qr=document.getElementById('qr-img');
     if(qr){console.log('[QR]',d.qrUrl);qr.src=d.qrUrl||'';}
-    const acct=document.getElementById('bi-account');
-    if(acct)acct.textContent=d.bankAccount||d.bankInfo?.account||'';
-    const desc=document.getElementById('bi-desc');
-    if(desc)desc.textContent=d.description||('Thanh toan '+d.orderCode);
+    const acct=document.getElementById('bi-account');if(acct)acct.textContent=d.bankAccount||'';
+    const desc=document.getElementById('bi-desc');if(desc)desc.textContent=d.description||('Thanh toan '+d.orderCode);
     showStep(2);startPolling(d.orderCode);
   }catch(err){alert('Lỗi kết nối. Vui lòng thử lại.');btn.disabled=false;btn.textContent='Tiếp theo — Thanh toán ↓';}
 }
-
 function startPolling(code){
   if(pollTimer)clearInterval(pollTimer);
   let attempts=0;
   pollTimer=setInterval(async()=>{
-    attempts++;
-    if(attempts>60){clearInterval(pollTimer);pollTimer=null;return;}
+    attempts++;if(attempts>60){clearInterval(pollTimer);pollTimer=null;return;}
     try{
       const r=await fetch('/api/check-payment?code='+code);
       const d=await r.json();
       if(d.status==='paid'){
         clearInterval(pollTimer);pollTimer=null;
-        const s3btn=document.getElementById('s3-btn');
-        if(s3btn)s3btn.href=d.fileUrl||'#';
-        const s3sub=document.getElementById('s3-sub');
-        if(s3sub)s3sub.innerHTML='Hành trình của <strong>'+(d.name||'bạn')+'</strong> đã bắt đầu rồi. Tài liệu đã gửi về email của bạn. Chúc bạn trọn vẹn với hành trình này! 💜';
+        const sb=document.getElementById('s3-btn');if(sb)sb.href=d.fileUrl||'#';
+        const ss=document.getElementById('s3-sub');
+        if(ss)ss.innerHTML='Hành trình của <strong>'+(d.name||'bạn')+'</strong> đã bắt đầu. Tài liệu đã gửi về email. Chúc bạn trọn vẹn với hành trình này. ✦';
         showStep(3);
       }
     }catch(e){}
   },3000);
 }
-
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
 </script>
 </body>
